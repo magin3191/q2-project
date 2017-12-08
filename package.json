@@ -4,7 +4,8 @@
   "description": "Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/magin3191/q2-project#readme",
   "dependencies": {
-    "materialize-css": "^0.100.2"
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "materialize-css": "^0.100.2",
+    "pg": "^7.4.0"
   }
 }
