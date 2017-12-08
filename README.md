@@ -15,21 +15,20 @@ Materialize designs:
 - Modals
 - Pushpin?
 - Waves?
-- Scrolling images?
 
 CSS Grid:
 - Yes
 
-Fonts: 
+Fonts:
 
-H1: 
+H1:
 Size:default
 Title
 Harbour
 
 
 
-H2: 
+H2:
 Size:default
 Name characters
 Brothers
@@ -45,11 +44,11 @@ P:
 Size:default
 Salon
 
-Colors: Muddy water 
+Colors: Muddy water
 Backgrounds: grey
 
 Margin: 20px,
-Padding: 15%
+Padding: 15px
 
 https://gstudents.slack.com/files/U72BH5PFF/F8CJFTCUX/20171207_164427.jpg
 
