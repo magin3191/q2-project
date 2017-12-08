@@ -50,10 +50,16 @@ Backgrounds: grey
 Margin: 20px,
 Padding: 15px
 
-Wire Frames:
-![Alt text](./img/mobileWireFrame.jpg "Mobile")
-![Alt text](./img/webWireFrame.jpg "Web")
-![Alt text](./img/modalsWireFrame.jpg "Login/Signup Modals")
+**Wire Frames:**
+
+Mobile:
+![Alt text](./img/mobileWireFrame.jpg)
+
+Web:
+![Alt text](./img/webWireFrame.jpg)
+
+Login/Signup:
+![Alt text](./img/modalsWireFrame.jpg)
 
 
 
