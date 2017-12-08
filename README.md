@@ -50,9 +50,10 @@ Backgrounds: grey
 Margin: 20px,
 Padding: 15px
 
-https://gstudents.slack.com/files/U72BH5PFF/F8CJFTCUX/20171207_164427.jpg
-
-
+Wire Frames:
+![Alt text](./img/mobileWireFrame.jpg)
+![Alt text](./img/modalsWireFrame.jpg)
+![Alt text](./img/webWireFrame.jpg)
 
 
 ID	Player	Pos	Age	Tm	G	GS	MP	FG	FGA	FG%	3P	3PA	3P%	2P	2PA	2P%	eFG%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PS/G
