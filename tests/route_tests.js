@@ -2,11 +2,11 @@
 
 process.env.NODE_ENV = 'test';
 
-const { suite, test } = require('mocha');
+const {suite, test} = require('mocha');
 const request = require('supertest');
 const knex = require('../knex');
 const server = require('../server');
-const { addDatabaseHooks } = require('./utils')
+const {addDatabaseHooks} = require('./utils')
 
 suite('routes', addDatabaseHooks(() => {
   test('GET /stats', (done) => {
