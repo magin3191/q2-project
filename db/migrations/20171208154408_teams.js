@@ -1,8 +1,9 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('teams',function(table){
-        table.increments()
-        table.string('Abv')
+        table.increments('Id')
+        table.string('ABV')
+        table.string('Teams')
 
 
     })

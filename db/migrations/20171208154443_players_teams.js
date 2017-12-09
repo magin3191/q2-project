@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.schema.createTable('Players_Teams',function(table){
+  return knex.schema.schema.createTable('Player_Teams',function(table){
     table.string('Player').references('Players.name')
     table.string('Pos').references('Players.Pos')
     table.integer('Tm').references('Players.Team').references('Teams.ABV')
