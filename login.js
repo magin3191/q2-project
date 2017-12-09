@@ -3,7 +3,11 @@
 <form action="/action_page.php">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<<<<<<< HEAD
     </div>
+=======
+</div>
+>>>>>>> fe2f08d6ecbb0931060fc433495357866bf102a2
 
   <div class="container">
     <label><b>Username</b></label>
