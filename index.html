@@ -11,106 +11,61 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+  <nav class="nav" role="navigation">
+    <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Signup</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="index.html">Signup</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-    </div>
+      <h1 class="header center orange-text">Compare!</h1>
   </div>
-
 
   <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
+    <ul class="collapsible" data-collapsible="expandable">
+     <li>
+       <div class="collapsible-header"><i class="material-icons">content_paste</i>First Stat</div>
+       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">content_paste</i>Second Stat</div>
+       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">edit</i>Constraint (optional)</div>
+       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+     </li>
+   </ul>
   </div>
 
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+  <footer class="page-footer">
+    <i id='copyright' class="material-icons">copyright</i>
+    <h3 id='copyText'>Tienken Stats 2017</h3>
 
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
+    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons">menu</i></a>
+   <!-- Tap Target Structure -->
+   <div class="tap-target" data-activates="about">
+     <div class="tap-target-content">
+       <h3>About The Team</h3>
+       <p>CSS is great</p>
+     </div>
+   </div>
   </footer>
 
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/init.js"></script>
 
   </body>

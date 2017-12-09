@@ -1,14 +1,83 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+/* R.O.S.S. w/ CSS */
+html {
+  font-family: Sabon MT Std;
+}
+nav {
+  height: 63px;
+  background-color: #0077a5;
+}
+body {
+  background-color: #e6e6e6;
+}
+body h1 {
+  font-family: Brothers;
+}
+h1 {
+  font-family: Harbour;
+}
+h2 {
+  font-family: Brothers;
+}
+h3 {
+  font-family: Klang MT;
+}
+.page-footer{
+  padding: 1rem;
+  height: 10%;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #0077a5;
+}
+#logo {
+  margin-top: 1px;
+  height: 99%;
+  width: 90px;
+  background: url("../img/tsLogo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#copyright {
+  position: absolute;
+  font-size: 3rem;
+}
+#copyText {
+  left: 13%;
+  font-size: 1.6rem;
+  margin: 10px;
+  position: absolute;
+}
+.copyright {
+  position: absolute;
+  left: 10%;
+}
+.collapsible {
+  font-size: 19px;
+}
+#about {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  background-color: #4f0909;
+}
+.btn{
+  background-color: #4f0909;
+}
+.tap-target {
+  background-color: #0f345e;
+}
+.tap-target-wrapper {
+  z-index: 0;
+}
+.tap-target-content {
+  text-align: -webkit-center;
+  padding: 40px 10px 40px 40px;
 }
