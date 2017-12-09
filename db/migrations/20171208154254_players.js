@@ -1,11 +1,14 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('players',(table){
+  return knex.schema.createTable('Players',(table){
     table.increments()
-    table.integer('name')
-    table.string('height')
-    table.string('weight')
-    table.string('position')
+    table.string('Player')
+    table.string('Pos')
+    table.string('Team')
+    table.integer('Nm')
+    table.string('Ht')
+    table.string('Wt')
+    table.integer('Age')
 
     )
 
