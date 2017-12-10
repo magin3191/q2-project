@@ -10,3 +10,7 @@ $('.modal').modal({
   },
   complete: function() {} // Callback for Modal close
 });
+
+$('li').click(function(){
+  console.log(this.value)
+})

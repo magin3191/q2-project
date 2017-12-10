@@ -81,3 +81,6 @@ h3 {
   text-align: -webkit-center;
   padding: 40px 10px 40px 40px;
 }
+.collapsible-body {
+  text-align: center;
+}
