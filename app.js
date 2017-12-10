@@ -6,7 +6,7 @@ var config = require('./knexfile')[environment]
 var knex = require('knex')(config)
 module.exports = knex
 
-
+app.use(express.static('public'))
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`)
