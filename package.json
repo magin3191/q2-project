@@ -19,9 +19,14 @@
   },
   "homepage": "https://github.com/magin3191/q2-project#readme",
   "dependencies": {
+    "chai": "^4.1.2",
     "express": "^4.16.2",
     "knex": "^0.14.2",
     "materialize-css": "^0.100.2",
     "pg": "^7.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
   }
 }
