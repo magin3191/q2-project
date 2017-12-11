@@ -32,7 +32,7 @@ app.get('/stats/teams', function(req, res, next) {
     // .where('id', req.params.id)
     // .then(function(table) {
     //   res.send(table)
-    })
+    // })
 })
 
 app.get('/users/:id', function(req, res, next) {
