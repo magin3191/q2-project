@@ -18,7 +18,7 @@
       <ul class="right hide-on-med-and-down">
         <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal3" class="modal">
@@ -55,7 +55,7 @@
         </li>
         <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal4" class="modal">
@@ -212,7 +212,7 @@
           <div class="collapsible-header active"><i class="material-icons">content_paste</i>First Stat</div>
           <div class="collapsible-body" id='drop1' value=''>
             <!-- Dropdown Trigger -->
-            <a id='dropLabel1' class='dropdown-button btn' data-activates='dropdown1'>Pick a stat</a>
+            <a id='dropLabel1' class='dropdown-button btn' data-activates='dropdown1'>Pick 1st stat</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
@@ -272,7 +272,7 @@
           <div class="collapsible-header"><i class="material-icons">content_paste</i>Second Stat</div>
           <div class="collapsible-body" id='drop2' value=''>
             <!-- Dropdown Trigger -->
-            <a id='dropLabel2' class='dropdown-button btn' data-activates='dropdown2'>Pick a stat</a>
+            <a id='dropLabel2' class='dropdown-button btn' data-activates='dropdown2'>Pick 2nd stat</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown2' class='dropdown-content'>
@@ -332,7 +332,7 @@
           <div class="collapsible-header"><i class="material-icons">edit</i>Constraint (optional)</div>
           <div class="collapsible-body" id='drop3' value=''>
             <!-- Dropdown Trigger -->
-            <a id='dropLabel3' class='dropdown-button btn' data-activates='dropdown3'>Pick a constraint</a>
+            <a id='dropLabel3' class='dropdown-button btn' data-activates='dropdown3'>Pick constraint</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown3' class='dropdown-content'>
@@ -353,11 +353,10 @@
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 6'6"</a></li>
               <li class="divider"></li>
               <li>
-                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">
-                  < 200</a>
+                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 200</a>
               </li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">200 - 230 </a></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">200 - 230</a></li>
               <li class="divider"></li>
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 230</a></li>
               <li class="divider"></li>
@@ -396,6 +395,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/init.js"></script>
 
 </body>
