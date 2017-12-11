@@ -23,20 +23,20 @@
           <!-- Modal Structure -->
           <div id="modal3" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="logEmailWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -60,35 +60,35 @@
           <!-- Modal Structure -->
           <div id="modal4" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
+                        <input placeholder="First Name" id="signFnWeb" type="text" class="validate">
                         <label for="fname">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                        <input placeholder="Last Name" id="signLnWeb" type="text" class="validate">
                         <label for="lname">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signUpWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -116,20 +116,20 @@
           <!-- Modal Structure -->
           <div id="modal1" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="LogEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -153,54 +153,54 @@
           <!-- Modal Structure -->
           <div id="modal2" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
-                        <label for="fname">First Name</label>
+                        <input placeholder="First Name" id="signFnMobile" type="text" class="validate">
+                        <label for="firstName">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
-                        <label for="lname">Last Name</label>
+                        <input placeholder="Last Name" id="signLnMobile" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                    <button class="waves-effect waves-light btn-large" type="submit" name="action">Signup
+                </button>
                   </div>
-                </div>
               </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+              </div>
             </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
-            </div>
-          </div>
         </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
+      </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <h1 class="header center orange-text">Compare!</h1>
@@ -352,13 +352,19 @@
               <li class="divider"></li>
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 6'6"</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 200</a></li>
+              <li>
+                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">
+                  < 200</a>
+              </li>
               <li class="divider"></li>
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">200 - 230 </a></li>
               <li class="divider"></li>
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 230</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 23</a></li>
+              <li>
+                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">
+                  < 23</a>
+              </li>
               <li class="divider"></li>
               <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">23 - 28</a></li>
               <li class="divider"></li>
@@ -368,7 +374,7 @@
         </li>
       </ul>
     </div>
-    <a id='search' class="waves-effect waves-light btn-large" >Search!</a>
+    <a id='search' class="waves-effect waves-light btn-large">Search!</a>
   </form>
 
   <footer class="page-footer">
