@@ -1,10 +1,10 @@
-const request = require('http://localhost:3000')
+const request = require('supertest')
 const express = require('express')
 const app = express()
 
-request.get('/').expect(200, function(err) {
-  console.log(err);
-})
+app.get('/user', function(req, res) {
+  res.status(200).json({name: 'tobi'});
+});
   // request.get('/').expect('heya', function(err) {
   //   console.log(err);
   // })

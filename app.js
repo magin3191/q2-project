@@ -12,5 +12,7 @@ app.listen(port, function() {
 
 module.exports = {
   knex,
-app
+  app,
+  environment,
+  port
 }
