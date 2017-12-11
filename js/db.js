@@ -20,9 +20,20 @@ function getRightConstraint(domc) {
     column = 'Pos'
     value = domc
   }
-  if (domc === "6'" || domc === "6' - 6'6\"" || domc === `> 6'6"`) {
+  if (domc === "6'") {
     column = 'Ht'
-    value = 100
+    value = 71
+    opp = '>'
+  }
+  if (domc === "6' - 6'6\"") {
+    column = 'Ht'
+    value = 72
+    opp = 78
+  }
+  if (domc === `> 6'6"`) {
+    column = 'Ht'
+    value = 79
+    opp
   }
   if (domc === '< 200' || domc === '200 - 230' || domc === '> 230') {
     column = 'Wt'
@@ -41,7 +52,11 @@ const constraint = getRightConstraint(domConstraint) //this comes from players t
 function cutDownData(constraint, stat1, stat2) {
   if (constraint.opp === false) {
     knex('Players').where(contraint.column, contraint.value)
-  } else {
+  }
+  if (constraint.opp === 78) {
+    knex('Players').whereBetween(contraint.column,[contraint.value,constraint.opp])
+  }
+  else {
     knex('Players').where(constraint.column, constraint.opp, constraint.value)
   }
 }
