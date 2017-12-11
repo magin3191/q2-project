@@ -4,9 +4,15 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgresql://5432/stats_db'
+    connection: 'postgres://localhost:5432/stats_db',
+
+    seeds: {
+      directory: './db/seeds'
+    },
+    migrations: {
+      directory: './db/migrations'
     }
+
   },
 
   staging: {

@@ -1,11 +1,11 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.schema.createTable('Player_Teams',function(table){
-    table.string('Player').references('Players.name')
-    table.string('Pos').references('Players.Pos')
-    table.string('Tm').references('Players.Team','Teams.ABV')
+  return knex.schema.createTable('player_teams',function(table){
+    table.string('Player')
+    table.string('Pos')
+    table.string('Tm')
     table.integer('G')
-    table.inteer('GS')
+    table.integer('GS')
     table.integer('MP')
     table.integer('FG')
     table.integer('FGA')
@@ -37,5 +37,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('Player_Teams')
+  return knex.schema.dropTable('player_teams')
 };

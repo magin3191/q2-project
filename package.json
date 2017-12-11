@@ -23,6 +23,7 @@
     "express": "^4.16.2",
     "jsdom": "^11.5.1",
     "knex": "^0.14.2",
+    "knex-csv-seeder": "^0.4.1",
     "materialize-css": "^0.100.2",
     "pg": "^7.4.0",
     "regression": "^2.0.0"
