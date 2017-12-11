@@ -4,7 +4,7 @@
   "description": "Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "repository": {
@@ -26,5 +26,13 @@
     "materialize-css": "^0.100.2",
     "pg": "^7.4.0",
     "regression": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
