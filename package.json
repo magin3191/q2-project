@@ -28,6 +28,7 @@
     "jsdom": "^11.5.1",
     "jsonwebtoken": "^8.1.0",
     "knex": "^0.14.2",
+    "knex-csv-seeder": "^0.4.1",
     "materialize-css": "^0.100.2",
     "path": "^0.12.7",
     "pg": "^7.4.0",

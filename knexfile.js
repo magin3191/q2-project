@@ -5,10 +5,15 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/stats_db',
+    connection: 'postgres://localhost:5432/stats_db',
+
+    seeds: {
+      directory: './db/seeds'
+    },
     migrations: {
-      directory: path.join(__dirname, 'db', 'migrations')
+      directory: './db/migrations'
     }
+
   },
 
   staging: {
