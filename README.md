@@ -1,3 +1,12 @@
+To get started, install the necessary npm packages
+```shell
+npm install
+npm install knex
+npm install express
+npm install body-parser
+npm install cookie-parser
+```
+
 
 Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing
 
