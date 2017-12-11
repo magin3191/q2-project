@@ -6,6 +6,10 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const JWT_KEY = process.env.JWT_KEY
 const router = express.Router()
+router.get('/fake', (req, res, next) => {
+  return res.status(200).send('Home Q2-Project')
+})
+
 
 router.post('/users', (req, res, next) => {
   const { email, password } = req.body

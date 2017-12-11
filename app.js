@@ -5,7 +5,6 @@ const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const knex = require('knex')(config)
-module.exports = knex
 
 app.use(bodyParser.json())
 
@@ -45,3 +44,5 @@ app
   .get(function(req, res, next) {})
   .post(function(req, res, next) {})
   .delete(function(req, res, next) {})
+
+module.exports = app
