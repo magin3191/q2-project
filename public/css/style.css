@@ -26,6 +26,10 @@ ul.right.hide-on-med-and-down {
   padding: 0;
 }
 
+#closeModal{
+  color: #4f0909;
+}
+
 body {
   background-color: #e6e6e6;
 }
