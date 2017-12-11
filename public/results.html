@@ -9,7 +9,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/results.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -18,25 +18,25 @@
       <ul class="right hide-on-med-and-down">
         <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal3" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="logEmailWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -55,40 +55,40 @@
         </li>
         <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal4" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
+                        <input placeholder="First Name" id="signFnWeb" type="text" class="validate">
                         <label for="fname">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                        <input placeholder="Last Name" id="signLnWeb" type="text" class="validate">
                         <label for="lname">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signUpWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -116,20 +116,20 @@
           <!-- Modal Structure -->
           <div id="modal1" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="LogEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -153,66 +153,66 @@
           <!-- Modal Structure -->
           <div id="modal2" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
-                        <label for="fname">First Name</label>
+                        <input placeholder="First Name" id="signFnMobile" type="text" class="validate">
+                        <label for="firstName">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
-                        <label for="lname">Last Name</label>
+                        <input placeholder="Last Name" id="signLnMobile" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                    <button class="waves-effect waves-light btn-large" type="submit" name="action">Signup
+                </button>
                   </div>
-                </div>
               </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+              </div>
             </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
-            </div>
-          </div>
         </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
+      </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
-    <h1 class="header center orange-text">Stat1</h1>
+    <h1 class="header center orange-text">Results</h1>
   </div>
-  <ul id="tabs-swipe-demo" class="tabs">
-    <li class="tab col s3"><a href="#swipe-1">Test 1</a></li>
-    <li class="tab col s3"><a class="active" href="#swipe-2">Test 2</a></li>
-    <li class="tab col s3"><a href="#swipe-3">Test 3</a></li>
+  <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
+    <li id='tab1' class="tab col s3"><a href="#swipe-1"> Scatter </a></li>
+    <li id='tab2' class="tab col s3"><a class="active" href="#swipe-2">  Table  </a></li>
+    <li id='tab3' class="tab col s3"><a href="#swipe-3">#1 Player</a></li>
   </ul>
-  <div id="swipe-1" class="col s12 blue">First tab content</div>
-  <div id="swipe-2" class="col s12 red">Second tab content</div>
-  <div id="swipe-3" class="col s12 green">Third tab content</div>
+  <div id="swipe-1" class="col s12">First tab content</div>
+  <div id="swipe-2" class="col s12">Second tab content</div>
+  <div id="swipe-3" class="col s12">Third tab content</div>
 
   <footer class="page-footer">
     <i id='copyright' class="material-icons">copyright</i>
@@ -233,6 +233,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/results.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/init.js"></script>
 
 </body>
