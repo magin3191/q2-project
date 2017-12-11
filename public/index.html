@@ -16,27 +16,27 @@
   <nav class="nav" role="navigation">
     <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li>
+        <li id='loginWeb'>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal3" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="logEmailWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -53,42 +53,42 @@
             </div>
           </div>
         </li>
-        <li>
+        <li id='signWeb'>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal4" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpWeb" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
+                        <input placeholder="First Name" id="signFnWeb" type="text" class="validate">
                         <label for="fname">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                        <input placeholder="Last Name" id="signLnWeb" type="text" class="validate">
                         <label for="lname">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signUpWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassWeb" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -105,31 +105,39 @@
             </div>
           </div>
         </li>
+
+        <!-- Logout & Favorites -->
+        <li id='logoutWeb'>
+          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+        <li id='favoritesWeb'>
+          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Home</a></li>
-        <li>
+        <li id='loginMobile'>
           <!-- Modal Trigger -->
           <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal1" class="modal">
             <div class="modal-content">
-              <form id="loginForm" class="col offset-s2 s8">
+              <form id="loginMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="LogEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="logPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
@@ -146,61 +154,67 @@
             </div>
           </div>
         </li>
-        <li>
+        <li id='signMobile'>
           <!-- Modal Trigger -->
           <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal2" class="modal">
             <div class="modal-content">
-              <form id="signUpForm" class="col offset-s2 s8">
+              <form id="signUpMobile" class="col offset-s2 s8">
                 <div class="card">
                   <div class="card-content">
                     <p class="card-title">Signup</p>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="First Name" id="firstName" type="text" class="validate">
-                        <label for="fname">First Name</label>
+                        <input placeholder="First Name" id="signFnMobile" type="text" class="validate">
+                        <label for="firstName">First Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
-                        <label for="lname">Last Name</label>
+                        <input placeholder="Last Name" id="signLnMobile" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <input placeholder="Email" id="signEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <input placeholder="Password" id="signPassMobile" type="password" class="validate">
                         <label for="password">Password</label>
                       </div>
                     </div>
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                    <button class="waves-effect waves-light btn-large" type="submit" name="action">Signup
+                </button>
                   </div>
-                </div>
               </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+              </div>
             </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
-            </div>
-          </div>
+        </li>
+        <li id='logoutMobile'>
+          <a style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+        <li id='favoritesMobile'>
+          <a  style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
         </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
+      </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <h1 class="header center orange-text">Compare!</h1>
@@ -212,15 +226,59 @@
           <div class="collapsible-header active"><i class="material-icons">content_paste</i>First Stat</div>
           <div class="collapsible-body" id='drop1' value=''>
             <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' data-activates='dropdown1'>Pick a constraint</a>
+            <a id='dropLabel1' class='dropdown-button btn' data-activates='dropdown1'>Pick 1st stat</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-              <li><a onclick="$('#drop1').attr('value', $(this).html())">one</a></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">G</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop1').attr('value', $(this).html())">two</a></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">GS</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop1').attr('value', $(this).html())">three</a></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">MP</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FGA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">eFG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FT</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FTA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FT%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">ORB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">DRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">TRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">AST</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">STL</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">BLK</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">TOV</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">PPG</a></li>
             </ul>
           </div>
         </li>
@@ -228,15 +286,59 @@
           <div class="collapsible-header"><i class="material-icons">content_paste</i>Second Stat</div>
           <div class="collapsible-body" id='drop2' value=''>
             <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' data-activates='dropdown2'>Pick a constraint</a>
+            <a id='dropLabel2' class='dropdown-button btn' data-activates='dropdown2'>Pick 2nd stat</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown2' class='dropdown-content'>
-              <li><a onclick="$('#drop2').attr('value', $(this).html())">one</a></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">G</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop2').attr('value', $(this).html())">two</a></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">GS</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop2').attr('value', $(this).html())">three</a></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">MP</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FGA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">eFG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FT</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FTA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FT%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">ORB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">DRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">TRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">AST</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">STL</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">BLK</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">TOV</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">PPG</a></li>
             </ul>
           </div>
         </li>
@@ -244,28 +346,55 @@
           <div class="collapsible-header"><i class="material-icons">edit</i>Constraint (optional)</div>
           <div class="collapsible-body" id='drop3' value=''>
             <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' data-activates='dropdown3'>Pick a constraint</a>
+            <a id='dropLabel3' class='dropdown-button btn' data-activates='dropdown3'>Pick constraint</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown3' class='dropdown-content'>
-              <li><a onclick="$('#drop3').attr('value', $(this).html())">one</a></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">PG</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop3').attr('value', $(this).html())">two</a></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">SG</a></li>
               <li class="divider"></li>
-              <li><a onclick="$('#drop3').attr('value', $(this).html())">three</a></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">SF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">C</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 6'</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">6' - 6'6"</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 6'6"</a></li>
+              <li class="divider"></li>
+              <li>
+                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 200</a>
+              </li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">200 - 230</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 230</a></li>
+              <li class="divider"></li>
+              <li>
+                <a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">
+                  < 23</a>
+              </li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">23 - 28</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 28</a></li>
             </ul>
           </div>
         </li>
       </ul>
     </div>
-    <button id='submit' class="waves-effect waves-light btn-large" type="submit" name="button">Search!</button>
+    <a id='search' class="waves-effect waves-light btn-large">Search!</a>
   </form>
 
   <footer class="page-footer">
     <i id='copyright' class="material-icons">copyright</i>
     <h3 id='copyText'>Tienken Stats 2017</h3>
 
-    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons">menu</i></a>
+    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons"></i></a>
     <!-- Tap Target Structure -->
     <div class="tap-target" data-activates="about">
       <div class="tap-target-content">
@@ -280,6 +409,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/init.js"></script>
 
 </body>

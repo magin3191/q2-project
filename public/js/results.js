@@ -1,4 +1,7 @@
 $(document).ready(() => {
+  $('#swipe-1').html(localStorage.getItem('stat1'))
+  $('#swipe-2').html(localStorage.getItem('stat2'))
+  $('#swipe-3').html(localStorage.getItem('constraint'))
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
     opacity: .5, // Opacity of modal background
@@ -9,14 +12,10 @@ $(document).ready(() => {
     ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
     },
     complete: () => {} // Callback for Modal close
-  });
-
-  const arr = $('.collapsible-body')
-  $('#search').click(() => {
-    localStorage.setItem('stat1', arr[0].attributes[2].value)
-    localStorage.setItem('stat2', arr[1].attributes[2].value)
-    localStorage.setItem('constraint', arr[2].attributes[2].value)
-    window.location.href = "results.html"
+  })
+  $('ul.tabs').tabs({
+    swipeable: true,
+    responsiveThreshold: 1920
   })
 
 

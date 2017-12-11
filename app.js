@@ -11,6 +11,12 @@ app.use(bodyParser.json())
 
 app.use(express.static('public'))
 
+const token = require('./routes/token');
+const users = require('./routes/users');
+
+app.use(token);
+app.use(users);
+
 app.listen(port, function() {
   console.log(`listening on port ${port}`)
 })
@@ -50,5 +56,3 @@ app
   .get(function(req, res, next) {})
   .post(function(req, res, next) {})
   .delete(function(req, res, next) {})
-
-app.get('/token', function(req, res, next) {})
