@@ -4,18 +4,19 @@ const bodyParser = require('body-parser')
 const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
+const cookieParser = require('cookie-parser')
 const knex = require('knex')(config)
 module.exports = knex
 
+app.use(cookieParser())
 app.use(bodyParser.json())
-
 app.use(express.static('public'))
 
-const token = require('./routes/token');
-const users = require('./routes/users');
+const token = require('./routes/token')
+const users = require('./routes/users')
 
-app.use(token);
-app.use(users);
+app.use(token)
+app.use(users)
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`)
