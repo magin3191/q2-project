@@ -16,7 +16,7 @@
   <nav class="nav" role="navigation">
     <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li>
+        <li id='loginWeb'>
           <!-- Modal Trigger -->
           <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
 
@@ -53,7 +53,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li id='signWeb'>
           <!-- Modal Trigger -->
           <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
 
@@ -105,11 +105,19 @@
             </div>
           </div>
         </li>
+
+        <!-- Logout & Favorites -->
+        <li id='logoutWeb'>
+          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+        <li id='favoritesWeb'>
+          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Home</a></li>
-        <li>
+        <li id='loginMobile'>
           <!-- Modal Trigger -->
           <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
 
@@ -146,7 +154,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li id='signMobile'>
           <!-- Modal Trigger -->
           <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
 
@@ -197,6 +205,12 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
               </div>
             </div>
+        </li>
+        <li id='logoutMobile'>
+          <a style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+        <li id='favoritesMobile'>
+          <a  style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
         </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>

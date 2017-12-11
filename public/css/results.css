@@ -22,6 +22,10 @@ ul.right.hide-on-med-and-down {
   font-family: Harbour;
 }
 
+#buttonWeb {
+  padding: 0;
+}
+
 body h1 {
   font-family: Brothers;
 }
