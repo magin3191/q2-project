@@ -6,11 +6,20 @@ $('.modal').modal({
   startingTop: '4%', // Starting top style attribute
   endingTop: '10%', // Ending top style attribute
   ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-    console.log(modal, trigger);
   },
   complete: function() {} // Callback for Modal close
 });
 
-$('li').click(function(){
-  console.log(this.value)
+// $('#dropdown3').click(() => console.log($(this)))
+// $('.d3').click(() => {
+//   $('#foot').attr('id', $(this).html())
+// })
+$('#submit').click(() => {
+  let arr = $('.collapsible-body')
+  for(let i = 0; i < arr.length; i++) {
+    console.log(arr[i].attributes[2].value)
+  }
 })
+
+
+// $('#submit').click(() => console.log('done'))
