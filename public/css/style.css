@@ -166,3 +166,10 @@ h3 {
 .carousel .carousel-item{
   width:100%;
 }
+
+.teamMem {
+  margin:5px;
+  text-align: left;
+  font-size: 1.7rem;
+  padding-left: 50px;
+}

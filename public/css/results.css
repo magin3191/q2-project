@@ -171,3 +171,10 @@ h3 {
   padding: 10px;
   font-size: -webkit-xxx-large;
 }
+
+.teamMem {
+  margin:5px;
+  text-align: left;
+  font-size: 1.7rem;
+  padding-left: 50px;
+}
