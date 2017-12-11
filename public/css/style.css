@@ -122,21 +122,12 @@ h3 {
   border-width: 2px;
 }
 
-#submit {
+#search {
   z-index: 0;
 }
 #tabs {
   height: 200px;
 }
-#test-swipe-1 {
-  height: inherit;
-  background-color: #4f0909;
-}
-#test-swipe-2 {
-  height: inherit;
-  background-color: #4f0909;
-}
-#test-swipe-3 {
-  height: inherit;
-  background-color: #4f0909;
+.carousel .carousel-item{
+  width:100%;
 }
