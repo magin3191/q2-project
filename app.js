@@ -6,7 +6,6 @@ const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const cookieParser = require('cookie-parser')
 const knex = require('knex')(config)
-module.exports = knex
 
 app.use(cookieParser())
 app.use(bodyParser.json())
@@ -57,3 +56,5 @@ app
   .get(function(req, res, next) {})
   .post(function(req, res, next) {})
   .delete(function(req, res, next) {})
+
+module.exports = app

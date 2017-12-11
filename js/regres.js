@@ -9,4 +9,4 @@ const yIntercept = result.equation[1]
 // r2: 0.89,
 // string: 'y = -0.98x + 43.33' }
 
-module.exports = { result }
+module.exports = {result}
