@@ -24,7 +24,7 @@ let file = path.join('DB-CSVs/Players.csv')
 exports.seed = seeder({
   table: 'players',
   file: file,
-  recordsPerQuery: 100,
+  // recordsPerQuery: 100,
   encoding: 'utf8',
   parser: {
     delimiter: ',',

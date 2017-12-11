@@ -2,13 +2,13 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('players',function(table){
     table.increments()
-    table.string('Player').notNullable()
-    table.string('Pos')
-    table.string('Team')
-    table.integer('Num')
-    table.string('Ht')
-    table.string('Wt')
-    table.integer('Age')
+    table.string('Player')
+    table.string('Pos').nullable()
+    table.string('Team').nullable()
+    table.integer('Num').nullable()
+    table.integer('Ht').nullable()
+    table.integer('Wt').nullable()
+    table.integer('Age').nullable()
 
 
   })
