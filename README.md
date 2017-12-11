@@ -3,8 +3,6 @@ To get started, install the necessary npm packages
 npm install
 npm install knex
 npm install express
-npm install body-parser
-npm install cookie-parser
 ```
 
 
