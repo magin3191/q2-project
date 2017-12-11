@@ -1,11 +1,13 @@
 // Update with your config settings.
+const path = require('path')
 
 module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgresql://5432/stats_db'
+    connection: 'postgres://localhost/stats_db',
+    migrations: {
+      directory: path.join(__dirname, 'db', 'migrations')
     }
   },
 
@@ -16,20 +18,17 @@ module.exports = {
       user:     'username',
       password: 'password'
     },
-
     migrations: {
-      tableName: 'knex_migrations'
+      directory: path.join(__dirname, 'db', 'migrations')
     }
   },
 
   production: {
     client: 'postgresql',
-    connection: process.env.DATABASE_URL
-
-
-    // migrations: {
-    //   tableName: 'knex_migrations'
-    // }
+    connection: process.env.DATABASE_URL,
+    migrations: {
+      directory: path.join(__dirname, 'db', 'migrations')
+    }
   }
 
 };

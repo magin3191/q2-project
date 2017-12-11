@@ -11,6 +11,12 @@ app.use(bodyParser.json())
 
 app.use(express.static('public'))
 
+const token = require('./routes/token');
+const users = require('./routes/users');
+
+app.use(token);
+app.use(users);
+
 app.listen(port, function() {
   console.log(`listening on port ${port}`)
 })
@@ -26,28 +32,16 @@ app.get('/stats/players', function(req, res, next) {
 })
 
 app.get('/stats/teams', function(req, res, next) {
-  knex
-    // .select('stats_db')
-    // .from('teams')
-    // .where('id', req.params.id)
-    // .then(function(table) {
-    //   res.send(table)
-    })
+knex
+// .select('stats_db')
+// .from('teams')
+// .where('id', req.params.id)
+// .then(function(table) {
+//   res.send(table)
 })
-
-app.get('/users/:id', function(req, res, next) {
-  // knex('users').where('id',req.params.id)
-  // .then(function(result){
-  //   res.send(result)
-  // })
-})
-
-app.post('/users/', function(req, res, next) {})
 
 app
   .route('/favorites')
   .get(function(req, res, next) {})
   .post(function(req, res, next) {})
   .delete(function(req, res, next) {})
-
-app.get('/token', function(req, res, next) {})

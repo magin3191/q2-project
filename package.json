@@ -4,8 +4,9 @@
   "description": "Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing",
   "main": "index.js",
   "scripts": {
+    "knex": "knex",
     "test": "mocha",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,15 @@
   },
   "homepage": "https://github.com/magin3191/q2-project#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "d3": "^4.12.0",
     "express": "^4.16.2",
     "jsdom": "^11.5.1",
+    "jsonwebtoken": "^8.1.0",
     "knex": "^0.14.2",
     "materialize-css": "^0.100.2",
+    "path": "^0.12.7",
     "pg": "^7.4.0",
     "regression": "^2.0.0"
   },
