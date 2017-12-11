@@ -4,8 +4,8 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('Player')
     table.string('Pos')
-    table.string('Team')
-    table.integer('Nm')
+    table.string('Team').reference('Teams.ABV')
+    table.integer('Num')
     table.string('Ht')
     table.string('Wt')
     table.integer('Age')
@@ -17,5 +17,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('players')
+  return knex.schema.dropTable('Players')
 };

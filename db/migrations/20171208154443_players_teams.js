@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('Pos').references('Players.Pos')
     table.integer('Tm').references('Players.Team').references('Teams.ABV')
     table.integer('G')
-    table.inteer('GS')
+    table.integer('GS')
     table.integer('MP')
     table.integer('FG')
     table.integer('FGA')
@@ -37,5 +37,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('Players_Teams')
+  return knex.schema.dropTable('Player_Teams')
 };

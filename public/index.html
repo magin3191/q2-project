@@ -205,65 +205,177 @@
   <div class="section no-pad-bot" id="index-banner">
     <h1 class="header center orange-text">Compare!</h1>
   </div>
+  <form id='statForm'>
+    <div class="container">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">content_paste</i>First Stat</div>
+          <div class="collapsible-body" id='drop1' value=''>
+            <!-- Dropdown Trigger -->
+            <a id='dropLabel1' class='dropdown-button btn' data-activates='dropdown1'>Pick a stat</a>
 
-  <div class="container">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header active"><i class="material-icons">content_paste</i>First Stat</div>
-        <div class="collapsible-body">
-          <!-- Dropdown Trigger -->
-          <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Pick a stat</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">G</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">GS</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">MP</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FGA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">3P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">2P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">eFG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FT</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FTA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">FT%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">ORB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">DRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">TRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">AST</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">STL</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">BLK</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">TOV</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop1').attr('value', $(this).html()); $('#dropLabel1').html($(this).html())">PPG</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">content_paste</i>Second Stat</div>
+          <div class="collapsible-body" id='drop2' value=''>
+            <!-- Dropdown Trigger -->
+            <a id='dropLabel2' class='dropdown-button btn' data-activates='dropdown2'>Pick a stat</a>
 
-          <!-- Dropdown Structure -->
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">content_paste</i>Second Stat</div>
-        <div class="collapsible-body">
-          <!-- Dropdown Trigger -->
-          <a class='dropdown-button btn' href='#' data-activates='dropdown2'>Pick a stat</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown2' class='dropdown-content'>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">G</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">GS</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">MP</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FGA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">3P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2P</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2PA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">2P%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">eFG%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FT</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FTA</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">FT%</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">ORB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">DRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">TRB</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">AST</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">STL</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">BLK</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">TOV</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop2').attr('value', $(this).html()); $('#dropLabel2').html($(this).html())">PPG</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">edit</i>Constraint (optional)</div>
+          <div class="collapsible-body" id='drop3' value=''>
+            <!-- Dropdown Trigger -->
+            <a id='dropLabel3' class='dropdown-button btn' data-activates='dropdown3'>Pick a constraint</a>
 
-          <!-- Dropdown Structure -->
-          <ul id='dropdown2' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">edit</i>Constraint (optional)</div>
-        <div class="collapsible-body">
-          <!-- Dropdown Trigger -->
-          <a class='dropdown-button btn' href='#' data-activates='dropdown3'>Pick a constraint</a>
-
-          <!-- Dropdown Structure -->
-          <ul id='dropdown3' class='dropdown-content'>
-            <li><a href="#!" value="done">one</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown3' class='dropdown-content'>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">PG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">SG</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">SF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">PF</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">C</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 6'</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">6' - 6'6"</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 6'6"</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 200</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">200 - 230 </a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 230</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">< 23</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">23 - 28</a></li>
+              <li class="divider"></li>
+              <li><a onclick="$('#drop3').attr('value', $(this).html()); $('#dropLabel3').html($(this).html())">> 28</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a id='search' class="waves-effect waves-light btn-large" >Search!</a>
+  </form>
 
   <footer class="page-footer">
     <i id='copyright' class="material-icons">copyright</i>
     <h3 id='copyText'>Tienken Stats 2017</h3>
 
-    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons">menu</i></a>
+    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons"></i></a>
     <!-- Tap Target Structure -->
     <div class="tap-target" data-activates="about">
       <div class="tap-target-content">

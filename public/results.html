@@ -1,10 +1,240 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html lang="en">
 
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Home Q2-Project</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="nav" role="navigation">
+    <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+
+          <!-- Modal Structure -->
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <form id="loginForm" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">Login</span>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+
+          <!-- Modal Structure -->
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <form id="signUpForm" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <p class="card-title">Signup</p>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="First Name" id="firstName" type="text" class="validate">
+                        <label for="fname">First Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                        <label for="lname">Last Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <form id="loginForm" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">Login</span>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
+
+          <!-- Modal Structure -->
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <form id="signUpForm" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <p class="card-title">Signup</p>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="First Name" id="firstName" type="text" class="validate">
+                        <label for="fname">First Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                        <label for="lname">Last Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <h1 class="header center orange-text">Stat1</h1>
+  </div>
+  <ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a href="#swipe-1">Test 1</a></li>
+    <li class="tab col s3"><a class="active" href="#swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a href="#swipe-3">Test 3</a></li>
+  </ul>
+  <div id="swipe-1" class="col s12 blue">First tab content</div>
+  <div id="swipe-2" class="col s12 red">Second tab content</div>
+  <div id="swipe-3" class="col s12 green">Third tab content</div>
+
+  <footer class="page-footer">
+    <i id='copyright' class="material-icons">copyright</i>
+    <h3 id='copyText'>Tienken Stats 2017</h3>
+
+    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons"></i></a>
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-activates="about">
+      <div class="tap-target-content">
+        <h3>About The Team</h3>
+        <p>CSS is great</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/results.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
 </html>
