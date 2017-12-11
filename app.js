@@ -17,9 +17,8 @@ app.listen(port, function() {
 
 app.get('/stats/players', function(req, res, next) {
   knex
-    .select('stats_db')
-    .from('players')
-    .where('id', req.params.id)
+    .select('players')
+    .from('stats_db')
     .then(function(table) {
       res.send(table)
     })
@@ -27,18 +26,20 @@ app.get('/stats/players', function(req, res, next) {
 
 app.get('/stats/teams', function(req, res, next) {
   knex
-    // .select('stats_db')
-    // .from('teams')
-    // .where('id', req.params.id)
-    // .then(function(table) {
-    //   res.send(table)
+    .select('teams')
+    .from('stats_db')
+    .where('id', req.params.id)
+    .then(function(table) {
+      res.send(table)
     })
 })
 
+app.get('/')
+
 app.get('/users/:id', function(req, res, next) {
-  // knex('users').where('id',req.params.id)
-  // .then(function(result){
-  //   res.send(result)
+  knex('users').where('id',req.params.id)
+  .then(function(result){
+    res.send(result)
   })
 })
 
