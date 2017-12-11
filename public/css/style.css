@@ -28,6 +28,9 @@ h2 {
 h3 {
   font-family: Klang MT;
 }
+#statForm {
+  text-align: center;
+}
 .page-footer{
   padding: 1rem;
   height: 10%;
@@ -83,4 +86,19 @@ h3 {
 }
 .collapsible-body {
   text-align: center;
+}
+
+.dropdown {
+  color: white;
+  background-color: #4f0909;
+  border-radius: 10px;
+  text-align-last: center;
+  font-size: larger;
+  vertical-align: top;
+  border-width: 2px;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
 }
