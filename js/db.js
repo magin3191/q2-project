@@ -35,9 +35,20 @@ function getRightConstraint(domc) {
     value = 79
     opp = 87
   }
-  if (domc === '< 200' || domc === '200 - 230' || domc === '> 230') {
+  if (domc === '< 200') {
     column = 'Wt'
-    value = 100
+    value = 200
+    opp = '<'
+  }
+  if(domc === '200 - 230') {
+    column = 'Wt'
+    value = 200
+    opp = 230
+  }
+  if(domc === '> 230') {
+    column = 'Wt'
+    value = 230
+    opp === '>'
   }
   return { column: column, value: value, opp: opp }
 }
