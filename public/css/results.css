@@ -90,7 +90,7 @@ h3 {
 
 #copyText {
   font-family: Harbour;
-  left: 13%;
+  left: 60px;
   font-size: 1.4rem;
   margin: 10px;
   position: absolute;
@@ -129,7 +129,12 @@ h3 {
 
 .tap-target-content {
   text-align: -webkit-center;
-  padding: 40px 10px 40px 40px;
+  padding: 40px;
+}
+@media only screen and (min-width: 600px){
+  .tap-target-content {
+    padding: 40px 0px 40px 80px;
+  }
 }
 
 .collapsible-body {
