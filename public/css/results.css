@@ -19,10 +19,20 @@ nav {
 
 ul.right.hide-on-med-and-down {
   color: white;
+  padding: 15px 0px;
   font-family: Harbour;
 }
 
-#buttonWeb {
+#logWeb {
+  padding: 0;
+}
+#signWeb {
+  padding: 0;
+}
+#favoritesWeb {
+  padding: 0;
+}
+#logoutWeb {
   padding: 0;
 }
 

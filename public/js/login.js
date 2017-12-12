@@ -1,6 +1,6 @@
 (() => {
 
-  //Mobile
+  //Web
   $('#loginWeb').submit((event) => {
     event.preventDefault()
 
@@ -33,10 +33,9 @@
   })
 
 
-  //Web
+  //Mobile
   $('#loginMobile').submit((event) => {
     event.preventDefault()
-
     const email = $('#logEmailMobile').val().trim()
     const password = $('#logPassMobile').val()
 
