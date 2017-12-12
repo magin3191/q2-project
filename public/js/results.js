@@ -13,6 +13,16 @@ $(document).ready(() => {
     },
     complete: () => {} // Callback for Modal close
   })
+  const ball = $('#ball')
+  ball.click(function() {
+    if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
+      ball.css({'color': 'orange', 'animation': 'fade1 .5s linear 1'})
+      Materialize.toast('Favorite added', 1500)
+    } else {
+      ball.css({'color': 'rgba(0, 0, 0, 0)', 'animation': 'fade2 .5s linear 1'})
+      Materialize.toast('Favorite removed', 1500)
+    }
+  })
   $('ul.tabs').tabs({
     swipeable: true,
     responsiveThreshold: 1920
