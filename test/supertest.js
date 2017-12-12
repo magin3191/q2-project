@@ -1,6 +1,5 @@
 const request = require('supertest')
 const express = require('express')
-//const test = require('mocha')
 const app = require('../app')
 const knex = require('knex')
 
@@ -10,8 +9,16 @@ const knex = require('knex')
         .expect(200, /Home Q2-Project/, done)
     })
   })
+  describe('users', function() {
+    it('checks users route', function(done) {
+      request(app).get('/users')
+      .expect(400, /Email must not be blank/, done)
+    })
+  })
 
-
+  setTimeout((function() {
+       return process.exit();
+     }), 320);
 
 // app.get('/stats_db', function(req, res) {
 //   res.status(200).json({name: 'g'});
