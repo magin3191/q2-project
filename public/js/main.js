@@ -13,9 +13,25 @@ $(document).ready(() => {
 
   const arr = $('.collapsible-body')
   $('#search').click(() => {
-    localStorage.setItem('stat1', arr[0].attributes[2].value)
-    localStorage.setItem('stat2', arr[1].attributes[2].value)
-    localStorage.setItem('constraint', arr[2].attributes[2].value)
-    window.location.href = "results.html"
+    event.preventDefault()
+    const options = {
+        contentType: 'application/json',
+        data: JSON.stringify({
+          stat1: arr[0].attributes[2].value,
+          stat2: arr[1].attributes[2].value,
+          constraint: arr[2].attributes[2].value
+        }),
+        dataType: 'json',
+        type: 'POST',
+        url: '/stats',
+        success: window.location.href = '/results.html'
+      }
+      $.ajax(options)
+        .done(() => {
+          window.location.href = '/results.html'
+        })
+        .fail(($xhr) => {
+          Materialize.toast($xhr.responseText, 3000)
+        })
   })
 })
