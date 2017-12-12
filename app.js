@@ -25,31 +25,31 @@ app.listen(port, function() {
   console.log(`listening on port ${port}`)
 })
 
-app.get('/stats', function(req, res, next) {
-  knex('players')
-    .from('stats_db')
-    .then(function(table) {
-      res.send(table)
-    })
-})
-
-app.get('/stats/players', function(req, res, next) {
-  knex
-    .select('players')
-    .from('stats_db')
-    .then(function(table) {
-      res.send(table)
-    })
-})
-
-app.get('/stats/teams', function(req, res, next) {
-  knex
-    .select('teams')
-    .from('stats_db')
-    .where('id', req.params.id)
-    .then(function(table) {
-      res.send(table)
-    })
-})
+// app.get('/stats', function(req, res, next) {
+//   knex('players')
+//     .from('stats_db')
+//     .then(function(table) {
+//       res.send(table)
+//     })
+// })
+//
+// app.get('/stats/players', function(req, res, next) {
+//   knex
+//     .select('players')
+//     .from('stats_db')
+//     .then(function(table) {
+//       res.send(table)
+//     })
+// })
+//
+// app.get('/stats/teams', function(req, res, next) {
+//   knex
+//     .select('teams')
+//     .from('stats_db')
+//     .where('id', req.params.id)
+//     .then(function(table) {
+//       res.send(table)
+//     })
+// })
 
 module.exports = app
