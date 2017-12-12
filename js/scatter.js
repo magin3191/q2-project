@@ -72,7 +72,7 @@ main
 
 var g = main.append('svg:g')
 
-g
+
   .selectAll('scatter-dots')
   .data(data)
   .enter()
