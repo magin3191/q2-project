@@ -1,7 +1,4 @@
 $(document).ready(() => {
-  // $('#swipe-1').html(localStorage.getItem('stat1'))
-  // $('#swipe-2').html(localStorage.getItem('stat2'))
-  // $('#swipe-3').html(localStorage.getItem('constraint'))
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
     opacity: .5, // Opacity of modal background
