@@ -89,10 +89,6 @@
         3000
       )
     }
-    console.log(firstName)
-    console.log(lastName)
-    console.log(email)
-    console.log(password)
 
     const options = {
       contentType: 'application/json',

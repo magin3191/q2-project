@@ -16,9 +16,9 @@
   <nav class="nav" role="navigation">
     <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li id='loginWeb'>
+        <li>
           <!-- Modal Trigger -->
-          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+          <a id='logWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal3" class="modal">
@@ -53,9 +53,9 @@
             </div>
           </div>
         </li>
-        <li id='signWeb'>
+        <li>
           <!-- Modal Trigger -->
-          <a id='buttonWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+          <a id='signWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal4" class="modal">
@@ -81,7 +81,7 @@
 
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="signUpWeb" type="text" class="validate">
+                        <input placeholder="Email" id="signEmailWeb" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
@@ -107,19 +107,19 @@
         </li>
 
         <!-- Logout & Favorites -->
-        <li id='logoutWeb'>
-          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        <li>
+          <a id='logoutWeb' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
         </li>
-        <li id='favoritesWeb'>
-          <a  id='buttonWeb' style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        <li>
+          <a id='favoritesWeb' style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
         </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Home</a></li>
-        <li id='loginMobile'>
+        <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
+          <a id='logMobile' class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
 
           <!-- Modal Structure -->
           <div id="modal1" class="modal">
@@ -130,7 +130,7 @@
                     <span class="card-title">Login</span>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="Email" id="LogEmailMobile" type="text" class="validate">
+                        <input placeholder="Email" id="logEmailMobile" type="text" class="validate">
                         <label for="email">Email</label>
                       </div>
                     </div>
@@ -154,9 +154,9 @@
             </div>
           </div>
         </li>
-        <li id='signMobile'>
+        <li>
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
+          <a id='signMobile' class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
 
           <!-- Modal Structure -->
           <div id="modal2" class="modal">
@@ -206,11 +206,11 @@
               </div>
             </div>
         </li>
-        <li id='logoutMobile'>
-          <a style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        <li>
+          <a id='logoutMobile' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
         </li>
-        <li id='favoritesMobile'>
-          <a  style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        <li>
+          <a id='favoritesMobile' style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
         </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -249,6 +249,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/results.js"></script>
   <script src="js/signup.js"></script>
   <script src="js/login.js"></script>
