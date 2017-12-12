@@ -25,6 +25,14 @@ app.listen(port, function() {
   console.log(`listening on port ${port}`)
 })
 
+app.get('/stats', function(req, res, next) {
+  knex('players')
+    .from('stats_db')
+    .then(function(table) {
+      res.send(table)
+    })
+})
+
 app.get('/stats/players', function(req, res, next) {
   knex
     .select('players')
@@ -43,22 +51,5 @@ app.get('/stats/teams', function(req, res, next) {
       res.send(table)
     })
 })
-
-app.get('/')
-
-app.get('/users/:id', function(req, res, next) {
-  knex('users').where('id',req.params.id)
-  .then(function(result){
-    res.send(result)
-  })
-})
-
-app.post('/users/', function(req, res, next) {})
-
-app
-  .route('/favorites')
-  .get(function(req, res, next) {})
-  .post(function(req, res, next) {})
-  .delete(function(req, res, next) {})
 
 module.exports = app
