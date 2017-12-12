@@ -88,8 +88,6 @@ function cutDownData(constraint, domStat1, domStat2) {
       .where(constraint.column, constraint.opp, constraint.value)
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-        console.log(result);
-        // return result
       })
   }
 }
