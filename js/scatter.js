@@ -1,86 +1,45 @@
 const regressData = require('./regres.js')
-const d3 = require('d3')
-// jsdom = require("jsdom");
-
-// pass the modified document element here
-// var document = jsdom.jsdom(),
-//     svg = d3.select(document.body).append("svg");
-
-var data = regressData.points
-
-var margin = { top: 20, right: 15, bottom: 60, left: 60 },
-  width = 960 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom
-
-var x = d3.scale
-  .linear()
-  .domain([
-    0,
-    d3.max(data, function(d) {
-      return d[0]
-    })
-  ])
-  .range([0, width])
-
-var y = d3.scale
-  .linear()
-  .domain([
-    0,
-    d3.max(data, function(d) {
-      return d[1]
-    })
-  ])
-  .range([height, 0])
-
-var chart = d3
-  .select('body')
-  .append('svg:svg')
-  .attr('width', width + margin.right + margin.left)
-  .attr('height', height + margin.top + margin.bottom)
-  .attr('class', 'chart')
-
-var main = chart
-  .append('g')
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-  .attr('width', width)
-  .attr('height', height)
-  .attr('class', 'main')
-
-// draw the x axis
-var xAxis = d3.svg
-  .axis()
-  .scale(x)
-  .orient('bottom')
-
-main
-  .append('g')
-  .attr('transform', 'translate(0,' + height + ')')
-  .attr('class', 'main axis date')
-  .call(xAxis)
-
-// draw the y axis
-var yAxis = d3.svg
-  .axis()
-  .scale(y)
-  .orient('left')
-
-main
-  .append('g')
-  .attr('transform', 'translate(0,0)')
-  .attr('class', 'main axis date')
-  .call(yAxis)
-
-var g = main.append('svg:g')
 
 
-  .selectAll('scatter-dots')
-  .data(data)
-  .enter()
-  .append('svg:circle')
-  .attr('cx', function(d, i) {
-    return x(d[0])
-  })
-  .attr('cy', function(d) {
-    return y(d[1])
-  })
-  .attr('r', 8)
+var chart = c3.generate({
+    data: {
+        xs: {
+            setosa: 'setosa_x',
+            versicolor: 'versicolor_x',
+        },
+        // iris data from R
+        columns: [
+            ["setosa_x", 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.4, 3.0, 3.0, 4.0, 4.4, 3.9, 3.5, 3.8, 3.8, 3.4, 3.7, 3.6, 3.3, 3.4, 3.0, 3.4, 3.5, 3.4, 3.2, 3.1, 3.4, 4.1, 4.2, 3.1, 3.2, 3.5, 3.6, 3.0, 3.4, 3.5, 2.3, 3.2, 3.5, 3.8, 3.0, 3.8, 3.2, 3.7, 3.3],
+            ["versicolor_x", 3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2.0, 3.0, 2.2, 2.9, 2.9, 3.1, 3.0, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3.0, 2.8, 3.0, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3.0, 3.4, 3.1, 2.3, 3.0, 2.5, 2.6, 3.0, 2.6, 2.3, 2.7, 3.0, 2.9, 2.9, 2.5, 2.8],
+            ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+            ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+        ],
+        type: 'scatter'
+    },
+    axis: {
+        x: {
+            label: 'Sepal.Width',
+            tick: {
+                fit: false
+            }
+        },
+        y: {
+            label: 'Petal.Width'
+        }
+    }
+});
+
+setTimeout(function () {
+    chart.load({
+        xs: {
+            virginica: 'virginica_x'
+        },
+        columns: [
+            ["virginica_x", 3.3, 2.7, 3.0, 2.9, 3.0, 3.0, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3.0, 2.5, 2.8, 3.2, 3.0, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3.0, 2.8, 3.0, 2.8, 3.8, 2.8, 2.8, 2.6, 3.0, 3.4, 3.1, 3.0, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3.0, 2.5, 3.0, 3.4, 3.0],
+            ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+        ]
+    });
+}, 1000);
+
+setTimeout(function () {
+  
