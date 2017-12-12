@@ -23,7 +23,10 @@ function runRegression(arr, stat1, stat2) {
       confidence: regressLinear.r2
     })
   }
-  return result
+  result.sort(function(a, b) {
+      return parseFloat(b.correl) - parseFloat(a.correl)
+  })
+  return result.slice(0,9)
 }
 
 module.exports = { runRegression }
