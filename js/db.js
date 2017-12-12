@@ -2,10 +2,7 @@
 const environment = 'development'
 const config = require('../knexfile')[environment]
 const knex = require('knex')(config)
-
-const domStat1 = localStorage.getItem('stat1') // these live in the dom
-const domStat2 = localStorage.getItem('stat2') // these live in the dom
-const domConstraint = localStorage.getItem('constraint') // these live in the dom
+const runRegression = require('./regres.js').runRegression
 
 function getRightConstraint(domc) {
   let column = ''
@@ -54,8 +51,8 @@ function getRightConstraint(domc) {
   return { column: column, value: value, opp: opp }
 }
 
- // this will be handed from dom, these are both coming from the player-teams table knex('player_teams').select(domStat2)
-const constraint = getRightConstraint(domConstraint) //this comes from players table
+// // this will be handed from dom, these are both coming from the player-teams table knex('player_teams').select(domStat2)
+// const constraint = getRightConstraint(domConstraint) //this comes from players table
 
 // the order here is we cut down the player table based on the contrait, then we will grab the entries in player-teams
 // linked by name, then we grab the two stats we want. After that we generate an object that looks like [{player_name: Alex Abrines, stat1: 12, stat2: 2}]
@@ -67,7 +64,7 @@ function cutDownData(constraint, domStat1, domStat2) {
       .where(constraint.column, constraint.value)
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-        return result
+        return runRegression(result, domStat1, domStat2)
       })
   }
   if (
@@ -80,7 +77,7 @@ function cutDownData(constraint, domStat1, domStat2) {
       .whereBetween(constraint.column, [constraint.value, constraint.opp])
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-        return result
+        return runRegression(result, domStat1, domStat2)
       })
   } else {
     return knex('players')
@@ -88,17 +85,25 @@ function cutDownData(constraint, domStat1, domStat2) {
       .where(constraint.column, constraint.opp, constraint.value)
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
+<<<<<<< HEAD
           return result
+=======
+        return runRegression(result, domStat1, domStat2)
+>>>>>>> 614173e31937cacf66a42a773889e601e52458bc
       })
   }
 }
 
+<<<<<<< HEAD
 module.exports={
   cutDownData,
 getRightConstraint
 }
 
 // cutDownData({ column: 'Wt', value: 230, opp: '>' }, stat1, stat2)
+=======
+module.exports = { cutDownData, getRightConstraint }
+>>>>>>> 614173e31937cacf66a42a773889e601e52458bc
 // Player ID will correspond to array index +1, we need to generate an array of player names that I can pull from
 // to generate a player object that looks like this {player_name: Alex Abrines, stat1: values, stat2: values, regression_cords: [25,44] }
 // https://github.com/Tom-Alexander/regression-js
