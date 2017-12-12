@@ -2,7 +2,6 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('player_teams',function(table){
     table.string('Player')
-    table.string('Pos')
     table.string('Tm')
     table.decimal('G')
     table.decimal('GS')
