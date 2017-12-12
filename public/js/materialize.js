@@ -9988,7 +9988,6 @@ if (Vel) {
             right: tapTargetTextRight,
             bottom: tapTargetTextBottom,
             left: tapTargetTextLeft,
-            padding: tapTargetTextPadding,
             verticalAlign: tapTargetTextAlign
           });
 
