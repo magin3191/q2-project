@@ -51,13 +51,13 @@ const constraint = getRightConstraint(domConstraint) //this comes from players t
 
 function cutDownData(constraint, stat1, stat2) {
   if (constraint.opp === false) {
-    knex('Players').where(contraint.column, contraint.value)
+    knex('players').where(contraint.column, contraint.value)
   }
-  if (constraint.opp === 78) {
-    knex('Players').whereBetween(contraint.column,[contraint.value,constraint.opp])
+  if (const\raint.opp === 78) {
+    knex('players').whereBetween(contraint.column,[contraint.value,constraint.opp])
   }
   else {
-    knex('Players').where(constraint.column, constraint.opp, constraint.value)
+    knex('players').where(constraint.column, constraint.opp, constraint.value)
   }
 }
 
