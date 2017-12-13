@@ -9,7 +9,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pq',
     connection: process.env.DATABASE_URL,
   }
 
