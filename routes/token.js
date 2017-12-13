@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 const JWT_KEY = process.env.JWT_KEY
 const router = express.Router()
 
-router.get('/token', (req, res) => {
+router.get('/token', (req, res, next) => {
   jwt.verify(req.cookies.token, JWT_KEY, (err, payload) => {
     if (err) {
       res.send(false)
@@ -62,7 +62,7 @@ router.post('/token', (req, res, next) => {
     })
 })
 
-router.delete('/token', (req, res) => {
+router.delete('/token', (req, res, next) => {
   res.clearCookie('token')
   res.end()
 })
