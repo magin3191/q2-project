@@ -11,14 +11,29 @@ const knex = require('knex')
   })
   describe('users', function() {
     it('checks users route', function(done) {
-      request(app).get('/users')
+      request(app).post('/users')
       .expect(400, /Email must not be blank/, done)
     })
   })
 
-  setTimeout((function() {
-       return process.exit();
-     }), 320);
+  // describe('stats', function() {
+  //   it('checks stats path', function(done) {
+  //     request(app).get('/stats')
+  //     .expect('table', done)
+  //
+  //   })
+  // })
+  describe('players', function() {
+    it('checks players path', function(done) {
+      request(app).get('/stats/players')
+      .expect('table', done)
+
+    })
+  })
+
+  // setTimeout((function() {
+  //      return process.exit();
+  //    }), 320);
 
 // app.get('/stats_db', function(req, res) {
 //   res.status(200).json({name: 'g'});
