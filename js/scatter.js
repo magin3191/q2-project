@@ -1,84 +1,102 @@
-const regressData = require('./regres.js')
-const d3 = require('d3')
-jsdom = require("jsdom");
+const results = JSON.parse(localStorage.getItem('results'))
+const stat1 = localStorage.getItem('stat1')
+const stat2 = localStorage.getItem('stat2')
+const c3 = require('c3')
+var chart = c3.generate({
+bindto: '#chart',
+  data: {
+    xs: {
+      stat1: `${stat1}`
+    },
+    // iris data from R
+    columns: [
+      [
+        `${stat1}`,
+        results.regresspoints[0][0],
+        results.regresspoints[0][1],
+        results.regresspoints[0][2],
+        results.regresspoints[0][3],
+        results.regresspoints[0][4],
+        results.regresspoints[0][5],
+        results.regresspoints[0][6],
+        results.regresspoints[0][7],
+        results.regresspoints[0][8],
+        results.regresspoints[0][9]
+      ]
+    ],
+    type: 'scatter'
+  },
+  axis: {
+    x: {
+      label: `${stat1}`,
+      tick: {
+        fit: true
+      }
+    },
+    y: {
+      label: `${stat2}`
+    }
+  }
+})
 
-var document = jsdom.jsdom(),
-    svg = d3.select(document.body).append("svg");
-
-var data = [[1,4],[1,2],[1,5]]
-
-var margin = { top: 20, right: 15, bottom: 60, left: 60 },
-  width = 960 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom
-var x = d3
-  .scaleLinear()
-  .domain([
-    0,
-    d3.max(data, function(d) {
-      return d[0]
-    })
-  ])
-  .range([0, width])
-
-var y = d3
-.scaleLinear()
-  .domain([
-    0,
-    d3.max(data, function(d) {
-      return d[1]
-    })
-  ])
-  .range([height, 0])
-
-var chart = d3
-  .select('body')
-  .append('svg:svg')
-  .attr('width', width + margin.right + margin.left)
-  .attr('height', height + margin.top + margin.bottom)
-  .attr('class', 'chart')
-
-var main = chart
-  .append('g')
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-  .attr('width', width)
-  .attr('height', height)
-  .attr('class', 'main')
-
-// draw the x axis
-var xAxis = d3.svg
-  .axis()
-  .scale(x)
-  .orient('bottom')
-
-main
-  .append('g')
-  .attr('transform', 'translate(0,' + height + ')')
-  .attr('class', 'main axis date')
-  .call(xAxis)
-
-// draw the y axis
-var yAxis = d3.svg
-  .axis()
-  .scale(y)
-  .orient('left')
-
-main
-  .append('g')
-  .attr('transform', 'translate(0,0)')
-  .attr('class', 'main axis date')
-  .call(yAxis)
-
-var g = main.append('svg:g')
-
-
-  .selectAll('scatter-dots')
-  .data(data)
-  .enter()
-  .append('svg:circle')
-  .attr('cx', function(d, i) {
-    return x(d[0])
+setTimeout(function() {
+  chart.load({
+    xs: {
+      Correl: `${stat2}`
+    },
+    columns: [
+      [
+        `${stat2}`,
+        results.regresspoints[1][0],
+        results.regresspoints[1][1],
+        results.regresspoints[1][2],
+        results.regresspoints[1][3],
+        results.regresspoints[1][4],
+        results.regresspoints[1][5],
+        results.regresspoints[1][6],
+        results.regresspoints[1][7],
+        results.regresspoints[1][8],
+        results.regresspoints[1][9]
+      ],
+      [
+        'Correl',
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0],
+        results.correl[0]
+      ]
+    ]
   })
-  .attr('cy', function(d) {
-    return y(d[1])
+}, 1000)
+
+setTimeout(function() {
+  chart.unload({
+    ids: 'FGA'
   })
-  .attr('r', 8)
+}, 2000)
+
+setTimeout(function() {
+  chart.load({
+    columns: [
+      [
+        `${stat1}`,
+        results.regresspoints[0][0],
+        results.regresspoints[0][1],
+        results.regresspoints[0][2],
+        results.regresspoints[0][3],
+        results.regresspoints[0][4],
+        results.regresspoints[0][5],
+        results.regresspoints[0][6],
+        results.regresspoints[0][7],
+        results.regresspoints[0][8],
+        results.regresspoints[0][9]
+      ]
+    ]
+  })
+}, 3000)
