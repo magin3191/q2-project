@@ -14,7 +14,6 @@ function runRegression(arr, stat1, stat2) {
   const regressLinear = regression.linear(playerStatPoints)
 
   for (let i = 0; i < playerStatPoints.length; i++) {
-
     result.push({
       player: playerNames[i],
       regresspoints: regressLinear.points[i],
