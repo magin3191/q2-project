@@ -85,25 +85,20 @@ function cutDownData(constraint, domStat1, domStat2) {
       .where(constraint.column, constraint.opp, constraint.value)
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-<<<<<<< HEAD
-          return result
-=======
+
+
+
         return runRegression(result, domStat1, domStat2)
->>>>>>> 614173e31937cacf66a42a773889e601e52458bc
+
       })
   }
 }
 
-<<<<<<< HEAD
-module.exports={
-  cutDownData,
-getRightConstraint
-}
 
 // cutDownData({ column: 'Wt', value: 230, opp: '>' }, stat1, stat2)
-=======
+
 module.exports = { cutDownData, getRightConstraint }
->>>>>>> 614173e31937cacf66a42a773889e601e52458bc
+
 // Player ID will correspond to array index +1, we need to generate an array of player names that I can pull from
 // to generate a player object that looks like this {player_name: Alex Abrines, stat1: values, stat2: values, regression_cords: [25,44] }
 // https://github.com/Tom-Alexander/regression-js
