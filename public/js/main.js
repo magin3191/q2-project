@@ -38,7 +38,8 @@ $(document).ready(() => {
           // window.location.href = '/results.html'
           localStorage.setItem('results', JSON.stringify(results))
         })
-        .fail(() => {
+        .fail((err) => {
+          console.log(err)
           Materialize.toast('Unable to post', 3000);
         });
   })
