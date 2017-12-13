@@ -68,12 +68,4 @@ Web:
 ![Alt text](public/img/webWireFrame.jpg)
 
 Login/Signup:
-<<<<<<< HEAD
 ![Alt text](./img/modalsWireFrame.jpg)
-=======
-![Alt text](public/img/modalsWireFrame.jpg)
-
-
-
-ID	Player	Pos	Age	Tm	G	GS	MP	FG	FGA	FG%	3P	3PA	3P%	2P	2PA	2P%	eFG%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PS/G
->>>>>>> dcb9706b376d2b60c74f9c214ccb07abc0aff10e
