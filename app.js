@@ -23,10 +23,8 @@ app.use(token)
 app.use(users)
 app.use(stats)
 
-app.listen(port, () => {
-  if (app.get('env') !== 'test') {
-    console.log('Listening on port', port);
-  }
+app.listen(process.env.PORT || 3000, function(){
+  console.log("listening on port ", this.address().port, app.settings.env);
 });
 
 module.exports = app
