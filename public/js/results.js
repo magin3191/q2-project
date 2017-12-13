@@ -1,12 +1,14 @@
 $(document).ready(() => {
   const results = JSON.parse(localStorage.getItem('results'))
+  const stat1 = localStorage.getItem('stat1')
+  const stat2 = localStorage.getItem('stat2')
   $('#confidence').html('Confidence = ' + (results[0].confidence * 100).toFixed(2) + '%')
   let tr = $('<tr/>')
   tr.append("<td>" + "<h5>Rank</h5>" + "</td>")
   tr.append("<td>" + "<h5>Player</h5>" + "</td>")
-  tr.append("<td>" + '<h5>Correlation</h5>' + "</td>")
-  tr.append("<td>" + '<h5>Stat1</h5>' + "</td>")
-  tr.append("<td>" + '<h5>Stat2</h5>' + "</td>")
+  tr.append("<td>" + "<h5>Correlation</h5>" + "</td>")
+  tr.append("<td>" + `<h5>${stat1}</h5>` + "</td>")
+  tr.append("<td>" + `<h5>${stat2}</h5>` + "</td>")
   $('table').append(tr)
   for (var i = 0; i < results.length; i++) {
       let tr = $('<tr/>')

@@ -62,6 +62,7 @@ h3 {
 }
 h5 {
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
 #statForm {
@@ -194,7 +195,7 @@ h5 {
 }
 .carousel .carousel-item{
   width:100%;
-  padding: 40px;
+  padding: 5px;
   font-size: large;
 }
 

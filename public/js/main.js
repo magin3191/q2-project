@@ -34,6 +34,8 @@ $(document).ready(() => {
     }
     $.ajax(options)
         .done(results => {
+          localStorage.setItem('stat1', arr[0].attributes[2].value)
+          localStorage.setItem('stat2', arr[1].attributes[2].value)
           localStorage.setItem('results', JSON.stringify(results))
           window.location.href = '/results.html'
         })
