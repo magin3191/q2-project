@@ -13,15 +13,15 @@ bindto: '#chart',
       [
         `${stat1}`,
         results.regresspoints[0][0],
-        results.regresspoints[0][1],
-        results.regresspoints[0][2],
-        results.regresspoints[0][3],
-        results.regresspoints[0][4],
-        results.regresspoints[0][5],
-        results.regresspoints[0][6],
-        results.regresspoints[0][7],
-        results.regresspoints[0][8],
-        results.regresspoints[0][9]
+        results.regresspoints[1][0],
+        results.regresspoints[2][0],
+        results.regresspoints[3][0],
+        results.regresspoints[4][0],
+        results.regresspoints[5][0],
+        results.regresspoints[6][0],
+        results.regresspoints[7][0],
+        results.regresspoints[8][0],
+        results.regresspoints[9][0]
       ]
     ],
     type: 'scatter'
@@ -47,29 +47,29 @@ setTimeout(function() {
     columns: [
       [
         `${stat2}`,
-        results.regresspoints[1][0],
+        results.regresspoints[0][1],
         results.regresspoints[1][1],
-        results.regresspoints[1][2],
-        results.regresspoints[1][3],
-        results.regresspoints[1][4],
-        results.regresspoints[1][5],
-        results.regresspoints[1][6],
-        results.regresspoints[1][7],
-        results.regresspoints[1][8],
-        results.regresspoints[1][9]
+        results.regresspoints[2][1],
+        results.regresspoints[3][1],
+        results.regresspoints[4][1],
+        results.regresspoints[5][1],
+        results.regresspoints[6][1],
+        results.regresspoints[7][1],
+        results.regresspoints[8][1],
+        results.regresspoints[9][1]
       ],
       [
         'Correl',
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0],
-        results.correl[0]
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl,
+        results.correl
       ]
     ]
   })
@@ -87,15 +87,15 @@ setTimeout(function() {
       [
         `${stat1}`,
         results.regresspoints[0][0],
-        results.regresspoints[0][1],
-        results.regresspoints[0][2],
-        results.regresspoints[0][3],
-        results.regresspoints[0][4],
-        results.regresspoints[0][5],
-        results.regresspoints[0][6],
-        results.regresspoints[0][7],
-        results.regresspoints[0][8],
-        results.regresspoints[0][9]
+        results.regresspoints[1][0],
+        results.regresspoints[2][0],
+        results.regresspoints[3][0],
+        results.regresspoints[4][0],
+        results.regresspoints[5][0],
+        results.regresspoints[6][0],
+        results.regresspoints[7][0],
+        results.regresspoints[8][0],
+        results.regresspoints[9][0]
       ]
     ]
   })
