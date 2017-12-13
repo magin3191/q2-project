@@ -6,7 +6,7 @@ const cutDownData = require('../js/db.js').cutDownData
 // router.use(bodyParser.json())
 
 router.post('/stats', function(req, res, next) {
-  cutDownData(getRightConstraint(req.body.constraint), req.body.stat1, req.body.stat2).then(
+  cutDownData({column: 'Pos', value:'PG', opp: false}, 'FG', 'MP').then(
     function(results) {
       res.send(results)
     }

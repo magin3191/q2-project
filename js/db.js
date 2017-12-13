@@ -62,8 +62,8 @@ function getRightConstraint(domc) {
 function cutDownData(constraint, domStat1, domStat2) {
   if (constraint.opp === false) {
     return knex('players')
-      // .select('player_teams.Player', domStat1, domStat2)
-      // .where(constraint.column, constraint.value)
+      .select('player_teams.Player', domStat1, domStat2)
+      .where(constraint.column, constraint.value)
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
         return runRegression(result, domStat1, domStat2)
