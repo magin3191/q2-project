@@ -1,62 +1,63 @@
 To get started, install the necessary npm packages
 ```shell
-npm install
-npm install knex
-npm install express
+1. npm install
+2. npm install knex
+3. npm install express
+4. npm install mocha
+5. npm install body-parser
+6. npm install knex-csv-seeder
 ```
 
+Heroku link: https://compare-bb-stats.herokuapp.com/
 
 Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing
 
 Waffel.io: https://waffle.io/magin3191/q2-project
 
 Schema: https://drive.google.com/file/d/1UpC2NWo5uZh6jaY9jzyNgf9bTl-0w-us/view?usp=sharing
-d3 designs:
-- Liquid Fill Gauge
-- Interactive Scatter Plot
 
-Materialize designs:
-- Collapsible/Popout
-- Dropdown
-- Feature Discovery(about section)
-- Tabs (Fixed Width/Swipeable)
-- Modals
-- Pushpin?
-- Waves?
+* d3 designs:
+  - Liquid Fill Gauge
+  - Interactive Scatter Plot
 
-CSS Grid:
-- Yes
+* Materialize designs:
+  - Collapsible/Popout
+  - Dropdown
+  - Feature Discovery(about section)
+  - Tabs (Fixed Width/Swipeable)
+  - Modals
+  - Pushpin?
+  - Waves?
 
-Fonts:
+* CSS Grid:
+  - Yes
 
-H1:
-Size:default
-Title
-Harbour
+Fonts/sizes:
+
+* H1:
+  - Size: default
+  - Title Font: Harbour
 
 
-
-H2:
-Size:default
-Name characters
-Brothers
+* H2:
+  - Size: default
+  - Name/characters font: Brothers
 
 
 
-H3:
-Size:default
-result/tab labels
-Klang
+* H3:
+  - Size: default
+  - Result/tab/labels font: Klang
 
-P:
-Size:default
-Salon
+* P:
+  - Size: default
+  - Salon
 
-Colors: Muddy water
-Backgrounds: grey
+* Colors: Muddy water
+* Backgrounds: grey
 
-Margin: 20px,
-Padding: 15px
+* Margin: 20px,
+* Padding: 15px
 
 **Wire Frames:**
 
@@ -68,7 +69,3 @@ Web:
 
 Login/Signup:
 ![Alt text](./img/modalsWireFrame.jpg)
-
-
-
-ID	Player	Pos	Age	Tm	G	GS	MP	FG	FGA	FG%	3P	3PA	3P%	2P	2PA	2P%	eFG%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PS/G
