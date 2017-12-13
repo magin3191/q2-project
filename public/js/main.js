@@ -34,7 +34,8 @@ $(document).ready(() => {
     }
     $.ajax(options)
         .done(results => {
-          window.location.href = '/results.html'
+          console.log(results)
+          // window.location.href = '/results.html'
           localStorage.setItem('results', JSON.stringify(results))
         })
         .fail(() => {
