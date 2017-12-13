@@ -62,10 +62,10 @@ Fonts/sizes:
 **Wire Frames:**
 
 Mobile:
-![Alt text](./img/mobileWireFrame.jpg)
+![Alt text](public/img/mobileWireFrame.jpg)
 
 Web:
-![Alt text](./img/webWireFrame.jpg)
+![Alt text](public/img/webWireFrame.jpg)
 
 Login/Signup:
 ![Alt text](./img/modalsWireFrame.jpg)
