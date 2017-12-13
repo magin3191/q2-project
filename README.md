@@ -68,4 +68,4 @@ Web:
 ![Alt text](public/img/webWireFrame.jpg)
 
 Login/Signup:
-![Alt text](./img/modalsWireFrame.jpg)
+![Alt text](public/img/modalsWireFrame.jpg)
