@@ -24,7 +24,7 @@ app.use(users)
 app.use(stats)
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("listening on port ", this.address().port, app.settings.env);
+  console.log("listening on port", this.address().port, app.settings.env);
 });
 
 module.exports = app
