@@ -23,9 +23,9 @@ const knex = require('knex')
   //
   //   })
   // })
-  describe('players', function() {
+  describe('stats', function() {
     it('checks players path', function(done) {
-      request(app).get('/stats/players')
+      request(app).get('/stats')
       .expect('table', done)
 
     })
