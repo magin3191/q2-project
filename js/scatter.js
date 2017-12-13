@@ -1,19 +1,17 @@
 const regressData = require('./regres.js')
 const d3 = require('d3')
-// jsdom = require("jsdom");
+jsdom = require("jsdom");
 
-// pass the modified document element here
-// var document = jsdom.jsdom(),
-//     svg = d3.select(document.body).append("svg");
+var document = jsdom.jsdom(),
+    svg = d3.select(document.body).append("svg");
 
-var data = regressData.points
+var data = [[1,4],[1,2],[1,5]]
 
 var margin = { top: 20, right: 15, bottom: 60, left: 60 },
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom
-
-var x = d3.scale
-  .linear()
+var x = d3
+  .scaleLinear()
   .domain([
     0,
     d3.max(data, function(d) {
@@ -22,8 +20,8 @@ var x = d3.scale
   ])
   .range([0, width])
 
-var y = d3.scale
-  .linear()
+var y = d3
+.scaleLinear()
   .domain([
     0,
     d3.max(data, function(d) {

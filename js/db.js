@@ -18,7 +18,8 @@ function getRightConstraint(domc) {
     column = 'Pos'
     value = domc
   }
-  if (domc === "6\'") {
+
+  if (domc === "&lt; 6\'") {
     column = 'Ht'
     value = 71
     opp = '>'
@@ -28,7 +29,8 @@ function getRightConstraint(domc) {
     value = 72
     opp = 78
   }
-  if (domc === '> 6\'6"') {
+  if (domc === `&gt; 6\'6"`) {
+
     column = 'Ht'
     value = 79
     opp = 87
@@ -77,7 +79,7 @@ function cutDownData(constraint, domStat1, domStat2) {
       .whereBetween(constraint.column, [constraint.value, constraint.opp])
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-        return runRegression(result, domStat1, domStat2)
+        return runRegression(result, 'FGA', 'PS/G')
       })
   } else {
     return knex('players')
@@ -89,7 +91,6 @@ function cutDownData(constraint, domStat1, domStat2) {
       })
   }
 }
-
 module.exports = { cutDownData, getRightConstraint }
 // Player ID will correspond to array index +1, we need to generate an array of player names that I can pull from
 // to generate a player object that looks like this {player_name: Alex Abrines, stat1: values, stat2: values, regression_cords: [25,44] }
