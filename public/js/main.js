@@ -20,6 +20,7 @@ $(document).ready(() => {
       return Materialize.toast('Please pick a 2nd Stat', 3000)
     }
     event.preventDefault()
+
     const options = {
       contentType: 'application/json',
       data: JSON.stringify({
@@ -30,16 +31,13 @@ $(document).ready(() => {
       dataType: 'json',
       type: 'POST',
       url: '/stats',
-      // success: window.location.href = '/results.html'
     }
     $.ajax(options)
         .done(results => {
-          console.log(results)
-          window.location.href = '/results.html'
           localStorage.setItem('results', JSON.stringify(results))
+          window.location.href = '/results.html'
         })
         .fail((err) => {
-          console.log(err)
           Materialize.toast('Unable to post', 3000);
         });
   })

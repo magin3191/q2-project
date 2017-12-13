@@ -17,21 +17,21 @@ function getRightConstraint(domc) {
     value = domc
   }
 
-  if (domc === "&lt; 6\'") {
+  if (domc === "&lt; 6'") {
     column = 'Ht'
     value = 71
-    opp = '>'
+    opp = '<'
   }
   if (domc === '6\' - 6\'6"') {
     column = 'Ht'
     value = 72
     opp = 78
   }
-  if (domc === `&gt; 6\'6"`) {
+  if (domc === '&gt; 6\'6"') {
 
     column = 'Ht'
     value = 79
-    opp = 87
+    opp = '>'
   }
   if (domc === '&lt; 200') {
     column = 'Wt'
@@ -69,7 +69,6 @@ function cutDownData(constraint, domStat1, domStat2) {
   }
   if (
     constraint.opp === 78 ||
-    constraint.opp === 87 ||
     constraint.opp === 230
   ) {
     return knex('players')
@@ -77,7 +76,7 @@ function cutDownData(constraint, domStat1, domStat2) {
       .whereBetween(constraint.column, [constraint.value, constraint.opp])
       .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
-        return runRegression(result, 'FGA', 'PS/G')
+        return runRegression(result, domStat1, domStat2)
       })
   } else {
     return knex('players')

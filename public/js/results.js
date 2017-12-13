@@ -1,13 +1,12 @@
 $(document).ready(() => {
   const results = JSON.parse(localStorage.getItem('results'))
-  console.log(results)
+  $('#confidence').html('Confidence = ' + (results[0].confidence * 100).toFixed(2) + '%')
   let tr = $('<tr/>')
   tr.append("<td>" + "<h5>Rank</h5>" + "</td>")
   tr.append("<td>" + "<h5>Player</h5>" + "</td>")
   tr.append("<td>" + '<h5>Correlation</h5>' + "</td>")
   tr.append("<td>" + '<h5>Stat1</h5>' + "</td>")
   tr.append("<td>" + '<h5>Stat2</h5>' + "</td>")
-  tr.append("<td>" + '<h5>Confidence</h5>' + "</td>")
   $('table').append(tr)
   for (var i = 0; i < results.length; i++) {
       let tr = $('<tr/>')
@@ -16,7 +15,6 @@ $(document).ready(() => {
       tr.append("<td>" + results[i].correl.toFixed(2) + "</td>")
       tr.append("<td>" + results[i].stat1 + "</td>")
       tr.append("<td>" + results[i].stat2 + "</td>")
-      tr.append("<td>" + results[i].confidence + "</td>")
       $('table').append(tr)
     }
   $('.modal').modal({

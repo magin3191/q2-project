@@ -27,7 +27,7 @@ function runRegression(arr, stat1, stat2) {
   result.sort(function(a, b) {
       return parseFloat(b.correl) - parseFloat(a.correl)
   })
-  return result.slice(0,9)
+  return result.slice(0,10)
 }
 
 module.exports = { runRegression }
