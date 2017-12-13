@@ -7,10 +7,10 @@ const cutDownData =require('../js/db.js').cutDownData
 
 router.post('/stats', function(req, res, next){
   console.log(req.body)
-  // cutDownData(getRightConstraint(domConstraint), domStat1, domStat2)
-  // .then(function(results){
-  //   res.send(results)
-  // })
+  cutDownData(getRightConstraint(domConstraint), domStat1, domStat2)
+  .then(function(results){
+    res.send(results)
+  })
 })
 
 
