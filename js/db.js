@@ -1,7 +1,5 @@
 // this is the data massaging file
-const environment = 'development'
-const config = require('../knexfile')[environment]
-const knex = require('knex')(config)
+const knex = require('../knex')
 const runRegression = require('./regres.js').runRegression
 
 function getRightConstraint(domc) {
@@ -62,9 +60,9 @@ function getRightConstraint(domc) {
 function cutDownData(constraint, domStat1, domStat2) {
   if (constraint.opp === false) {
     return knex('players')
-      // .select('player_teams.Player', domStat1, domStat2)
-      // .where(constraint.column, constraint.value)
-      // .join('player_teams', 'player_teams.Player', 'players.Player')
+      .select('player_teams.Player', domStat1, domStat2)
+      .where(constraint.column, constraint.value)
+      .join('player_teams', 'player_teams.Player', 'players.Player')
       .then(result => {
         return runRegression(result, domStat1, domStat2)
       })
