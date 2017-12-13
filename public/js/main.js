@@ -30,7 +30,14 @@ $(document).ready(() => {
       dataType: 'json',
       type: 'POST',
       url: '/stats',
-      success: window.location.href = '/results.html'
+      // success: window.location.href = '/results.html'
     }
+    $.ajax(options)
+        .done(() => {
+          window.location.href = '/results.html';
+        })
+        .fail(() => {
+          Materialize.toast('Unable to post', 3000);
+        });
   })
 })
