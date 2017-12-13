@@ -12,6 +12,7 @@ router.post('/stats', function(req, res, next) {
     }
   )
   .catch((err) => {
+    console.log(err)
     next(err)
   })
 })
