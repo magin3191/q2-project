@@ -17,14 +17,14 @@ function getRightConstraint(domc) {
     value = domc
   }
 
-  if (domc === "&lt; 6'") {
+  if (domc === '&lt; 6\'2"') {
     column = 'Ht'
-    value = 71
+    value = 73
     opp = '<'
   }
-  if (domc === '6\' - 6\'6"') {
+  if (domc === '6\'2" - 6\'6"') {
     column = 'Ht'
-    value = 72
+    value = 73
     opp = 78
   }
   if (domc === '&gt; 6\'6"') {
@@ -46,7 +46,22 @@ function getRightConstraint(domc) {
   if (domc === '&gt; 230') {
     column = 'Wt'
     value = 230
-    opp === '>'
+    opp = '>'
+  }
+  if (domc === '&lt; 23') {
+    column = 'Age'
+    value = 23
+    opp = '<'
+  }
+  if (domc === '23 - 28') {
+    column = 'Age'
+    value = 23
+    opp = 28
+  }
+  if (domc === '&gt; 28') {
+    column = 'Age'
+    value = 28
+    opp = '>'
   }
   return { column: column, value: value, opp: opp }
 }
@@ -67,10 +82,7 @@ function cutDownData(constraint, domStat1, domStat2) {
         return runRegression(result, domStat1, domStat2)
       })
   }
-  if (
-    constraint.opp === 78 ||
-    constraint.opp === 230
-  ) {
+  if (constraint.opp === 78 || constraint.opp === 230 || constraint.opp === 28) {
     return knex('players')
       .select('player_teams.Player', domStat1, domStat2)
       .whereBetween(constraint.column, [constraint.value, constraint.opp])
