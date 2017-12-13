@@ -18,22 +18,22 @@ function getRightConstraint(domc) {
     column = 'Pos'
     value = domc
   }
-  if (domc === "6'") {
+  if (domc === "6\'") {
     column = 'Ht'
     value = 71
     opp = '>'
   }
-  if (domc === "6' - 6'6\"") {
+  if (domc === '6\' - 6\'6"') {
     column = 'Ht'
     value = 72
     opp = 78
   }
-  if (domc === `> 6'6"`) {
+  if (domc === '> 6\'6"') {
     column = 'Ht'
     value = 79
     opp = 87
   }
-  if (domc === '< 200') {
+  if (domc === '&lt; 200') {
     column = 'Wt'
     value = 200
     opp = '<'
@@ -43,7 +43,7 @@ function getRightConstraint(domc) {
     value = 200
     opp = 230
   }
-  if (domc === '> 230') {
+  if (domc === '&gt; 230') {
     column = 'Wt'
     value = 230
     opp === '>'
