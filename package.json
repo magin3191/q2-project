@@ -33,6 +33,7 @@
     "knex": "^0.14.2",
     "knex-csv-seeder": "^0.4.1",
     "materialize-css": "^0.100.2",
+    "node": "^9.2.0",
     "path": "^0.12.7",
     "pg": "^7.4.0",
     "regression": "^2.0.0"
