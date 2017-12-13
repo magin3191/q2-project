@@ -43,7 +43,7 @@
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Login</button>
                   </div>
                 </div>
               </form>
@@ -95,7 +95,7 @@
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
                   </div>
                 </div>
               </form>
@@ -144,7 +144,7 @@
                   </div>
 
                   <div class="card-action">
-                    <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Login</button>
                   </div>
                 </div>
               </form>
@@ -219,28 +219,42 @@
   <div class="section no-pad-bot" id="index-banner">
     <h1 class="header center orange-text">Results</h1>
   </div>
-  <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
-    <li id='tab1' class="tab col s3"><a href="#swipe-1"> Scatter </a></li>
-    <li id='tab2' class="tab col s3"><a class="active" href="#swipe-2">  Table  </a></li>
-    <li id='tab3' class="tab col s3"><a href="#swipe-3">#1 Player</a></li>
-  </ul>
-  <div id="swipe-1" class="col s12">First tab content</div>
-  <div id="swipe-2" class="col s12">Second tab content</div>
-  <div id="swipe-3" class="col s12">Third tab content</div>
+  <div id=results>
+    <div id='svgBall'>
+      <svg id='ball' class="tooltipped" data-position="top" data-delay="50" data-tooltip="Make Favorite" viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+      <path d="M142.327 112.062C214.1 47.017 307.79 5.714 411 .55V410.5H280.346c-8.144-184.333-121.358-284.64-138.02-298.438z" fill="currentColor"/>
+      <path class='.bb-1' d="M111.104 143.388C46.716 214.908 5.822 307.995.574 410.5h235.893c-7.19-145.817-109.942-251.965-125.363-267.112z" fill="currentColor"/>
+      <path d="M110.902 722.388C46.422 650.666 5.552 557.292.524 454.5h235.788c-8.297 149.66-114.564 257.273-125.41 267.888z" fill="currentColor"/>
+      <path d="M141.633 753.308C213.497 818.716 307.458 860.268 411 865.45V454.5H280.354c-8.297 189.4-127.334 289.638-138.72 298.808z" fill="currentColor"/>
+      <path d="M723.222 754.346C651.507 819.156 557.992 860.296 455 865.45V454h129.39c7.743 190.638 127.705 291.398 138.832 300.346z" fill="currentColor"/>
+      <path d="M754.06 723.538C819.244 651.55 860.555 557.54 865.5 454H628.416c7.704 151.184 115.666 259.807 125.644 269.538z" fill="currentColor"/>
+      <path d="M754.82 143.302C819.145 214.716 860.042 307.652 865.4 410H628.418c8.043-149.258 115.93-256.613 126.4-266.698z" fill="currentColor"/>
+      <path d="M723.687 112.075C651.91 47.022 558.217 5.715 455 .55V410h129.53c8.944-188.743 128.016-288.947 139.157-297.925z" fill="currentColor"/>
+      </svg>
+    </div>
+    <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
+      <li id='tab1' class="tab col s3"><a href="#swipe-1"> Scatter </a></li>
+      <li id='tab2' class="tab col s3"><a class="active" href="#swipe-2">  Table  </a></li>
+      <li id='tab3' class="tab col s3"><a href="#swipe-3">#1 Player</a></li>
+    </ul>
+    <div id="swipe-1" class="col s12"></div>
+    <div id="swipe-2" class="col s12"></div>
+    <div id="swipe-3" class="col s12"></div>
+  </div>
 
   <footer class="page-footer">
-    <i id='copyright' class="material-icons">copyright</i>
-    <h3 id='copyText'>Tienken Stats 2017</h3>
+    <i id='copyright' class="material-icons valign-wrapper">copyright</i>
+    <h3 id='copyText' class="valign-wrapper">Tienken Stats 2017</h3>
 
     <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons"></i></a>
     <!-- Tap Target Structure -->
     <div class="tap-target" data-activates="about">
       <div class="tap-target-content">
         <h3>Team Members</h3>
-        <p class='teamMem' >• Ross Tienken</p>
-        <p class='teamMem' >• Caelin Sheahan</p>
-        <p class='teamMem' >• Tim Jackson</p>
-        <p class='teamMem' >• Matt Agin</p>
+        <p class='teamMem'>• Ross Tienken</p>
+        <p class='teamMem'>• Caelin Sheahan</p>
+        <p class='teamMem'>• Tim Jackson</p>
+        <p class='teamMem'>• Matt Agin</p>
       </div>
     </div>
   </footer>

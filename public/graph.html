@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>table graph</title>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+<!-- <p>where is my graph</p> -->
+<script>
+//d3.select('body').append('p').text('Hi I changed this')
+var dataArray = [20, 30, 40,50];
+// var width = 500;
+// var height = 500;
+
+// var widthScale = d3.scale.linear()
+//               .domain([0, 60])
+//               .range([0, width]);
+
+// var canvas = d3.select('body')
+//               .append('svg')
+//               .attr('width', 500)
+//               .attr('height', 500);
+//
+// var bars = canvas.selectAll('rect')
+//               .data(dataArray)
+//               .enter()
+//                 .append('rect')
+//                 .style('color', 'green')
+//                 .attr('height', function(d) {return d * 10;})
+//                 .attr('width', 50)
+//                 .attr('x', function(d, i) {return i * 100});
+  // let data = [10, 25, 40, 39, 56, 19, 34, 42, 31, 76]
+  let width = 500
+  let height = 500
+
+  let heightScale = d3.scale.linear()
+    .domain([0, 100])
+    .range([0, height])
+
+  let color = d3.scale.linear()
+    .domain([0, 100])
+    .range(['blue', 'yellow'])
+
+  let canvas = d3.select('body')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
+
+  let  bars =  canvas.selectAll('rect')
+            .data(data)
+            .enter()
+              .append('rect')
+              .attr('height', function(d) {return heightScale(d)})
+              .attr('width', 50)
+              .attr('fill', function(d) {return color(d)})
+
+
+</script>
+
+
+</body>
+
+</html>

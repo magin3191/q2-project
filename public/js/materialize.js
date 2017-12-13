@@ -2888,6 +2888,23 @@ if (Vel) {
             backdrop.velocity('stop');
             tooltipEl.css({ visibility: 'visible', left: '0px', top: '0px' });
 
+            setTimeout(function () {
+              started = false
+              if (started !== true) {
+                tooltipEl.velocity({
+                  opacity: 0, translateY: 0, translateX: 0 }, { duration: 225, queue: false });
+                backdrop.velocity({ opacity: 0, scaleX: 1, scaleY: 1 }, {
+                  duration: 225,
+                  queue: false,
+                  complete: function () {
+                    backdrop.css({ visibility: 'hidden' });
+                    tooltipEl.css({ visibility: 'hidden' });
+                    started = false;
+                  }
+                });
+              }
+            }, 1300);
+
             // Tooltip positioning
             var originWidth = origin.outerWidth();
             var originHeight = origin.outerHeight();

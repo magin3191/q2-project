@@ -18,6 +18,7 @@ function getRightConstraint(domc) {
     column = 'Pos'
     value = domc
   }
+
   if (domc === "&lt; 6\'") {
     column = 'Ht'
     value = 71
@@ -29,6 +30,7 @@ function getRightConstraint(domc) {
     opp = 78
   }
   if (domc === `&gt; 6\'6"`) {
+
     column = 'Ht'
     value = 79
     opp = 87

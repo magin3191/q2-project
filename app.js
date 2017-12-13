@@ -17,17 +17,19 @@ app.use(express.static('public'))
 
 const token = require('./routes/token')
 const users = require('./routes/users')
+const stats = require('./routes/stats')
 
 app.use(token)
 app.use(users)
+app.use(stats)
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`)
 })
 
 app.get('/stats', function(req, res, next) {
-  knex('players')
-    .from('stats_db')
+  knex('stats_db')
+    .limit(10)
     .then(function(table) {
       res.send(table)
     })
