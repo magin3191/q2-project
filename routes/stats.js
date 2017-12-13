@@ -11,6 +11,9 @@ router.post('/stats', function(req, res, next) {
       res.send(results)
     }
   )
+  .catch((err) => {
+    next(err)
+  })
 })
 
 module.exports = router
