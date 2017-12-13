@@ -2941,7 +2941,7 @@ thead {
 td, th {
   padding: 15px 5px;
   display: table-cell;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   border-radius: 2px;
 }
@@ -8235,8 +8235,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 .carousel .carousel-item {
   display: none;
+  height: 710px;
   width: 200px;
-  height: 200px;
   position: absolute;
   top: 0;
   left: 0;

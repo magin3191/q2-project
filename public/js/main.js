@@ -33,8 +33,9 @@ $(document).ready(() => {
       // success: window.location.href = '/results.html'
     }
     $.ajax(options)
-        .done(() => {
-          window.location.href = '/results.html';
+        .done(results => {
+          window.location.href = '/results.html'
+          localStorage.setItem('results', JSON.stringify(results))
         })
         .fail(() => {
           Materialize.toast('Unable to post', 3000);
