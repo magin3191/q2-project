@@ -6,6 +6,11 @@ function getRightConstraint(domc) {
   let column = ''
   let value = ''
   let opp = false
+  if (domc === 'All') {
+    column = 'All'
+    value = 'All'
+    opp = 'All'
+  }
   if (
     domc === 'PG' ||
     domc === 'SG' ||
@@ -90,7 +95,16 @@ function cutDownData(constraint, domStat1, domStat2) {
       .then(result => {
         return runRegression(result, domStat1, domStat2)
       })
-  } else {
+  }
+  if (constraint.column === 'All' || constraint.opp === 'All' || constraint.opp === 'All') {
+    return knex('players')
+      .select('player_teams.Player', domStat1, domStat2)
+      .join('player_teams', 'player_teams.Player', 'players.Player')
+      .then(result => {
+        return runRegression(result, domStat1, domStat2)
+      })
+  }
+  else {
     return knex('players')
       .select('player_teams.Player', domStat1, domStat2)
       .where(constraint.column, constraint.opp, constraint.value)
