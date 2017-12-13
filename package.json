@@ -4,10 +4,10 @@
   "description": "Routes: https://drive.google.com/file/d/1tNVR4sqMlCXZqGdSlBajFwI5p0IB7_Hg/view?usp=sharing",
   "main": "app.js",
   "scripts": {
-    "heroku-postbuild": "knex migrate:latest",
+    "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
     "knex": "knex",
     "test": "mocha tests",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
