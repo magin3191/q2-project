@@ -1,7 +1,4 @@
 $(document).ready(() => {
-  // $('#swipe-1').html(localStorage.getItem('stat1'))
-  // $('#swipe-2').html(localStorage.getItem('stat2'))
-  // $('#swipe-3').html(localStorage.getItem('constraint'))
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
     opacity: .5, // Opacity of modal background
@@ -15,13 +12,20 @@ $(document).ready(() => {
   })
   const ball = $('#ball')
   ball.click(function() {
-    if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
-      ball.css({'color': 'orange', 'animation': 'fade1 .5s linear 1'})
-      Materialize.toast('Favorite added', 1500)
-    } else {
-      ball.css({'color': 'rgba(0, 0, 0, 0)', 'animation': 'fade2 .5s linear 1'})
-      Materialize.toast('Favorite removed', 1500)
-    }
+    $.getJSON('/token')
+      .done((loggedIn) => {
+        if (loggedIn) {
+          if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
+            ball.css({'color': 'orange', 'animation': 'fade1 .5s linear 1'})
+            Materialize.toast('Favorite added', 1500)
+          } else {
+            ball.css({'color': 'rgba(0, 0, 0, 0)', 'animation': 'fade2 .5s linear 1'})
+            Materialize.toast('Favorite removed', 1500)
+          }
+        } else {
+          Materialize.toast('You must be logged in to add favorites', 2500)
+        }
+      })
   })
   $('ul.tabs').tabs({
     swipeable: true,

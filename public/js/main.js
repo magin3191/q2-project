@@ -13,25 +13,24 @@ $(document).ready(() => {
 
   const arr = $('.collapsible-body')
   $('#search').click(() => {
+    if(!arr[0].attributes[2].value) {
+      return Materialize.toast('Please pick a 1st Stat', 2000)
+    }
+    if(!arr[1].attributes[2].value) {
+      return Materialize.toast('Please pick a 2nd Stat', 3000)
+    }
     event.preventDefault()
     const options = {
-        contentType: 'application/json',
-        data: JSON.stringify({
-          stat1: arr[0].attributes[2].value,
-          stat2: arr[1].attributes[2].value,
-          constraint: arr[2].attributes[2].value
-        }),
-        dataType: 'json',
-        type: 'POST',
-        url: '/stats',
-        success: window.location.href = '/results.html'
-      }
-      $.ajax(options)
-        .done(() => {
-          window.location.href = '/results.html'
-        })
-        .fail(($xhr) => {
-          Materialize.toast($xhr.responseText, 3000)
-        })
+      contentType: 'application/json',
+      data: JSON.stringify({
+        stat1: arr[0].attributes[2].value,
+        stat2: arr[1].attributes[2].value,
+        constraint: arr[2].attributes[2].value
+      }),
+      dataType: 'json',
+      type: 'POST',
+      url: '/stats',
+      success: window.location.href = '/results.html'
+    }
   })
 })
