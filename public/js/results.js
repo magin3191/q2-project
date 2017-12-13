@@ -1,4 +1,26 @@
 $(document).ready(() => {
+  const results = JSON.parse(localStorage.getItem('results'))
+  console.log(results)
+  let tr = $('<tr/>')
+  tr.append("<td>" + "<h5>Rank</h5>" + "</td>")
+  tr.append("<td>" + "<h5>Player</h5>" + "</td>")
+  tr.append("<td>" + '<h5>Regression Points</h5>' + "</td>")
+  tr.append("<td>" + '<h5>Correlation</h5>' + "</td>")
+  tr.append("<td>" + '<h5>Stat1</h5>' + "</td>")
+  tr.append("<td>" + '<h5>Stat2</h5>' + "</td>")
+  tr.append("<td>" + '<h5>Confidence</h5>' + "</td>")
+  $('table').append(tr)
+  for (var i = 0; i < results.length; i++) {
+      let tr = $('<tr/>')
+      tr.append("<td>" + '#' + (i+1) + "</td>")
+      tr.append("<td>" + results[i].player + "</td>")
+      tr.append("<td>" + results[i].regresspoints + "</td>")
+      tr.append("<td>" + results[i].correl.toFixed(2) + "</td>")
+      tr.append("<td>" + results[i].stat1 + "</td>")
+      tr.append("<td>" + results[i].stat2 + "</td>")
+      tr.append("<td>" + results[i].confidence + "</td>")
+      $('table').append(tr)
+    }
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
     opacity: .5, // Opacity of modal background
