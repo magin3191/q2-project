@@ -23,35 +23,10 @@ app.use(token)
 app.use(users)
 app.use(stats)
 
-app.listen(port, function() {
-  console.log(`listening on port ${port}`)
-})
-
-// app.get('/stats', function(req, res, next) {
-//   knex('stats_db')
-//     .limit(10)
-//     .then(function(table) {
-//       res.send(table)
-//     })
-// })
-//
-// app.get('/stats/players', function(req, res, next) {
-//   knex
-//     .select('players')
-//     .from('stats_db')
-//     .then(function(table) {
-//       res.send(table)
-//     })
-// })
-//
-// app.get('/stats/teams', function(req, res, next) {
-//   knex
-//     .select('teams')
-//     .from('stats_db')
-//     .where('id', req.params.id)
-//     .then(function(table) {
-//       res.send(table)
-//     })
-// })
+app.listen(port, () => {
+  if (app.get('env') !== 'test') {
+    console.log('Listening on port', port);
+  }
+});
 
 module.exports = app
