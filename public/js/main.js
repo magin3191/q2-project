@@ -19,6 +19,9 @@ $(document).ready(() => {
     if(!arr[1].attributes[2].value) {
       return Materialize.toast('Please pick a 2nd Stat', 3000)
     }
+    if(!arr[2].attributes[2].value) {
+      return Materialize.toast('Please pick a Constraint', 3000)
+    }
     event.preventDefault()
 
     const options = {
