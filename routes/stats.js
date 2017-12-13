@@ -14,4 +14,4 @@ router.post('/stats', function(req, res, next) {
   )
 })
 
-module.exports = router 
+module.exports = router
