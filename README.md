@@ -3,9 +3,6 @@ To get started, install the necessary npm packages
 1. npm install
 2. npm install knex
 3. npm install express
-4. npm install mocha
-5. npm install body-parser
-6. npm install knex-csv-seeder
 ```
 
 Heroku link: https://compare-bb-stats.herokuapp.com/
