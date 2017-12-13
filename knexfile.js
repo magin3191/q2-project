@@ -32,10 +32,10 @@ module.exports = {
     client: 'postgresql',
     connection: process.env.DATABASE_URL,
     seeds: {
-      directory: './db/seeds'
+      directory: path.join(__dirname, 'db', 'seeds')
     },
     migrations: {
-      directory: './db/migrations'
+      directory: path.join(__dirname, 'db', 'migrations')
     }
   }
 
