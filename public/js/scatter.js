@@ -6,6 +6,14 @@ const stat2 = localStorage.getItem('stat2')
 
 var chart = c3.generate({
 bindto: '#chart',
+point: {
+       focus: {
+           expand: {
+               enabled: false
+           }
+       },
+       r: 10
+   },
     data: {
         xs: {
             'stat1': 'stat2',
@@ -58,3 +66,49 @@ bindto: '#chart',
     }
 })
 })
+
+var labels = [
+[
+  results[0].player_name,
+  results[1].player_name,
+  results[2].player_name,
+  results[3].player_name,
+  results[4].player_name,
+  results[5].player_name,
+  results[6].player_name,
+  results[7].player_name,
+  results[8].player_name,
+  results[9].player_name
+],
+[
+  results[0].player_name,
+  results[1].player_name,
+  results[2].player_name,
+  results[3].player_name,
+  results[4].player_name,
+  results[5].player_name,
+  results[6].player_name,
+  results[7].player_name,
+  results[8].player_name,
+  results[9].player_name
+]
+];
+// series
+var series = chart.internal.main
+                .selectAll('.' + c3.chart.internal.fn.CLASS.circles)[0];
+// text layers
+var texts = chart.internal.main
+                .selectAll('.' + c3.chart.internal.fn.CLASS.chartTexts)
+                .selectAll('.' + c3.chart.internal.fn.CLASS.chartText)[0]
+series.forEach(function (series, i) {
+    var points = d3.select(series).selectAll('.' + c3.chart.internal.fn.CLASS.circle)[0]
+    points.forEach(function (point, j) {
+        d3.select(texts[i])
+            .append('text')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '0.3em')
+            .attr('x', d3.select(point).attr('cx'))
+            .attr('y', d3.select(point).attr('cy'))
+            .text(labels[i][j])
+    })
+});
