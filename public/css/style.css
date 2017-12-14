@@ -8,29 +8,25 @@
 
 /* CSS w/ R.O.S.S. */
 
-html {
-  font-family: Sabon MT Std;
+@font-face {
+  font-family: 'Harbour';
+  src: url('../fonts/custom/HarbourMedium.ttf');
+}
+@font-face {
+  font-family: 'Brothers';
+  src: url('../fonts/custom/Brothers-Bold.ttf');
+}
+@font-face {
+  font-family: 'Klang MT';
+  src: url('../fonts/custom/KlangMT.ttf');
+}
+@font-face {
+  font-family: 'Sabon MT Std';
+  src: url('../fonts/custom/SabonMTStd-Regular.otf');
 }
 
-@font-face {
-  font-family: Harbour;
-  src: url('../fonts/custom/HarbourMedium.ttf'),
-  url('Harbour.eot');
-}
-@font-face {
-  font-family: Brothers-Bold;
-  src: url('../fonts/custom/Brothers-Bold.ttf'),
-  url('Brothers-Bold.eot');
-}
-@font-face {
-  font-family: KlangMT;
-  src: url('../fonts/custom/KlangMT.ttf'),
-  url('KlangMT.eot');
-}
-@font-face {
-  font-family: SbonMTStd-Regular;
-  src: url('../fonts/custom/SbonMTStd-Regular.otf'),
-  url('SbonMTStd-Regular.eot');
+html {
+  font-family: Sabon MT Std;
 }
 
 nav {
