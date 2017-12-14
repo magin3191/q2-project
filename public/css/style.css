@@ -22,7 +22,7 @@
 }
 @font-face {
   font-family: 'Sabon MT Std';
-  src: url('../fonts/custom/SabonMTStd-Regular.otf')format('truetype');
+  src: url('../fonts/custom/SabonMTStd-Regular.otf')format('opentype');
 }
 
 html {

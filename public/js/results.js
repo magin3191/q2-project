@@ -7,7 +7,7 @@ $(document).ready(() => {
   let tr = $('<tr/>')
   tr.append("<td>" + "<h5>Rank</h5>" + "</td>")
   tr.append("<td>" + "<h5>Player</h5>" + "</td>")
-  tr.append("<td>" + "<h5>Correlation</h5>" + "</td>")
+  tr.append("<td>" + "<h5>Correl.</h5>" + "</td>")
   tr.append("<td>" + `<h5>${stat1}</h5>` + "</td>")
   tr.append("<td>" + `<h5>${stat2}</h5>` + "</td>")
   $('table').append(tr)
