@@ -20,7 +20,12 @@ $(document).ready(() => {
       tr.append("<td>" + results[i].stat2 + "</td>")
       $('table').append(tr)
     }
-    const ball = $('#ball')
+  const ball = $('#ball')
+  if (ball.css('color') === 'rgba(0, 0, 0, 0)') {
+  }
+  else {
+
+  }
   ball.click(function() {
     $.getJSON('/token')
       .done((loggedIn) => {
@@ -49,7 +54,10 @@ $(document).ready(() => {
 
       $.ajax(options)
         .done(() => {
-          ball.css({'color': 'orange', 'animation': 'fade1 .5s linear 1'})
+          ball
+            .css({'color': 'orange', 'animation': 'fade1 .5s linear 1'})
+            .attr({'data-tooltip': 'Remove Favorite'})
+            .tooltip();
           Materialize.toast('Favorite added', 1500)
         })
         .fail(() => {
@@ -69,7 +77,10 @@ $(document).ready(() => {
 
       $.ajax(options)
         .done(() => {
-          ball.css({'color': 'rgba(0, 0, 0, 0)', 'animation': 'fade2 .5s linear 1'})
+          ball
+            .css({'color': 'rgba(0, 0, 0, 0)', 'animation': 'fade2 .5s linear 1'})
+            .attr({'data-tooltip': 'Add Favorite'})
+            .tooltip()
           Materialize.toast('Favorite removed', 1500)
         })
         .fail(() => {
