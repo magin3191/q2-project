@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: 'Brothers';
-  src: url('../fonts/custom/Brothers-Bold.ttf')format('truetype');
+  src: local(Brothers-Bold), url('../fonts/custom/Brothers-Bold.ttf')format('truetype');
 }
 @font-face {
   font-family: 'Klang MT';
