@@ -39,7 +39,7 @@ Harbour
 H2:
 Size:default
 Name characters
-Brothers
+NCAA Marquette Bold
 
 
 
@@ -68,7 +68,3 @@ Web:
 
 Login/Signup:
 ![Alt text](./img/modalsWireFrame.jpg)
-
-
-
-ID	Player	Pos	Age	Tm	G	GS	MP	FG	FGA	FG%	3P	3PA	3P%	2P	2PA	2P%	eFG%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PS/G
