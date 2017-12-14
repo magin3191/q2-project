@@ -66,8 +66,4 @@ Web:
 ![Alt text](public/img/webWireFrame.jpg)
 
 Login/Signup:
-<<<<<<< HEAD
-![Alt text](./img/modalsWireFrame.jpg)
-=======
 ![Alt text](public/img/modalsWireFrame.jpg)
->>>>>>> 169f859e95d7201e99102423766c5dd9aee8e234
