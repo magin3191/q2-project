@@ -1,9 +1,22 @@
-To get started, install the necessary npm packages
-```shell
-1. npm install
-2. npm install knex
-3. npm install express
-```
+
+This app is designed to find correlations of NBA statistics using imported csv data.
+
+Authors: Ross Tienken, Caelin Sheahan, Tim Jackson, Matt Agin.
+
+
+1.To get started, run 'npm install' in the command line.
+
+2.Next, create a database with 'createdb stats_db.'
+
+3.To migrate the data, run 'knex migrate:latest.'
+
+4.To seed the database, run 'knex seed:run.'
+
+5.To run the app on the server, run 'npm start' or 'nodemon.'
+
+* After making any changes to the migrations or seeds, be sure to drop the database with 'dropdb', and do all steps starting with step 2.
+
+
 
 Heroku link: https://compare-bb-stats.herokuapp.com/
 
@@ -37,9 +50,9 @@ Fonts/sizes:
 
 
 H2:
-Size:default
-Name characters
-NCAA Marquette Bold
+  - Size: default
+  - Name: characters
+  - Font: NCAA Marquette Bold
 
 
 
