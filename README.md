@@ -36,9 +36,10 @@ Fonts/sizes:
   - Title Font: Harbour
 
 
-* H2:
-  - Size: default
-  - Name/characters font: Brothers
+H2:
+Size:default
+Name characters
+NCAA Marquette Bold
 
 
 
