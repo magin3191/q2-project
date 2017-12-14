@@ -10,19 +10,19 @@
 
 @font-face {
   font-family: 'Harbour';
-  src: url('../fonts/custom/HarbourMedium.ttf');
+  src: url('../fonts/custom/HarbourMedium.ttf')format('truetype');
 }
 @font-face {
   font-family: 'Brothers';
-  src: url('../fonts/custom/Brothers-Bold.ttf');
+  src: url('../fonts/custom/Brothers-Bold.ttf')format('truetype');
 }
 @font-face {
   font-family: 'Klang MT';
-  src: url('../fonts/custom/KlangMT.ttf');
+  src: url('../fonts/custom/KlangMT.ttf')format('truetype');
 }
 @font-face {
   font-family: 'Sabon MT Std';
-  src: url('../fonts/custom/SabonMTStd-Regular.otf');
+  src: url('../fonts/custom/SabonMTStd-Regular.otf')format('truetype');
 }
 
 html {
