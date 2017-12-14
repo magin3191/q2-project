@@ -12,6 +12,27 @@ html {
   font-family: Sabon MT Std;
 }
 
+@font-face {
+  font-family: Harbour;
+  src: url('../fonts/custom/HarbourMedium.ttf'),
+  url('Harbour.eot');
+}
+@font-face {
+  font-family: Brothers-Bold;
+  src: url('../fonts/custom/Brothers-Bold.ttf'),
+  url('Brothers-Bold.eot');
+}
+@font-face {
+  font-family: KlangMT;
+  src: url('../fonts/custom/KlangMT.ttf'),
+  url('KlangMT.eot');
+}
+@font-face {
+  font-family: SbonMTStd-Regular;
+  src: url('../fonts/custom/SbonMTStd-Regular.otf'),
+  url('SbonMTStd-Regular.eot');
+}
+
 nav {
   height: 63px;
   background-color: #0077a5;

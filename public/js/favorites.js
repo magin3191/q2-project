@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
   $.getJSON('/favorites')
     .done((favorites) => {
       const $favs = $('#favorites');

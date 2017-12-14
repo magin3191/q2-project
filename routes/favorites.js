@@ -1,6 +1,7 @@
 'use strict';
 
 const bcrypt = require('bcrypt')
+const boom = require('boom')
 const { camelizeKeys, decamelizeKeys } = require('humps')
 const jwt = require('jsonwebtoken')
 const knex = require('../knex')
@@ -29,26 +30,11 @@ router.get('/favorites', authorize, (req, res, next) => {
 })
 
 router.post('/favorites', authorize, (req, res, next) => {
-  const id = req.body.bookId
-  if(isNaN(id)){
-    res.setHeader('content-type', 'text/plain')
-    return res.status(400).send('Book ID must be an integer');
-  }
-  knex('books')
-    .where('id', id)
-    .first()
-    .then((book) => {
-      if(!book){
-        res.setHeader('content-type', 'text/plain')
-        return res.status(404).send('Book not found');
-      }
-    const newFav = {user_id: req.claim.userId,book_id: req.body.bookId}
-    return knex('favorites').insert(newFav, '*')
-      .then(fav => {
-        delete newFav.created_at
-        delete newFav.updated_at
-        res.send(camelizeKeys(fav[0]))
-      })
+  let search = JSON.stringify(req.body)
+  const newFav = {user_id: req.claim.userId,favorite: search}
+  return knex('favorites').insert(newFav, '*')
+    .then(fav => {
+      res.send(camelizeKeys(fav[0]))
     })
     .catch((err) => {
       next(err)
@@ -56,36 +42,19 @@ router.post('/favorites', authorize, (req, res, next) => {
 })
 
 router.delete('/favorites', authorize, (req, res, next) => {
-  const id = req.body.bookId;
-  if (isNaN(id)) {
-    res.setHeader('content-type', 'text/plain')
-    return res.status(400).send('Book ID must be an integer');
-  }
-  let favorite;
+  let search = JSON.stringify(req.body)
+  let favs
+  return knex('favorites')
+    .where('favorite', search).first()
+    .then(fav => {
+      favs = camelizeKeys(fav)
+      return knex('favorites').del()
+      .where('id', favs.id)
+      .then(() => {
+        delete favs.id
+        res.send(favs)
+      })
 
-  knex('favorites')
-    .where('id', id)
-    .first()
-    .then((book) => {
-      // if (!book) {
-      //   res.setHeader('content-type', 'text/plain')
-      //   return res.status(404).send('Favorite not found');
-      // }
-    // const clause = { bookId: id, userId: req.claim.userId };
-    favorite = camelizeKeys(book);
-    return knex('favorites')
-      delete newFav.created_at
-      delete newFav.updated_at
-      .del()
-      .where('id', favorite.id);
-    })
-    .then(() => {
-      if (!favorite) {
-        res.setHeader('content-type', 'text/plain')
-        return res.status(404).send('Favorite not found');
-      }
-      delete favorite.id;
-      res.send(favorite);
     })
     .catch((err) => {
       next(err)
