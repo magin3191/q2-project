@@ -39,6 +39,11 @@ $(document).ready(() => {
         .done(results => {
           localStorage.setItem('stat1', arr[0].attributes[2].value)
           localStorage.setItem('stat2', arr[1].attributes[2].value)
+          localStorage.setItem('search_id', JSON.stringify({
+            stat1: arr[0].attributes[2].value,
+            stat2: arr[1].attributes[2].value,
+            constraint: arr[2].attributes[2].value
+          }))
           localStorage.setItem('results', JSON.stringify(results))
           window.location.href = '/results.html'
         })

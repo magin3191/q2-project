@@ -8,6 +8,25 @@
 
 /* CSS w/ R.O.S.S. */
 
+@font-face {
+  font-family: 'Harbour';
+  src: url('../fonts/custom/HarbourMedium.ttf')format('truetype');
+}
+@font-face {
+  font-family: 'NCAA Marquette Bold';
+  src: url('../fonts/custom/ncaa_marquette_bold-webfont.woff2') format('woff2'),
+  url('../fonts/custom/ncaa_marquette_bold-webfont.woff') format('woff'),
+     url('../fonts/custom/ncaa_marquette_bold-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Klang MT';
+  src: url('../fonts/custom/KlangMT.ttf')format('truetype');
+}
+@font-face {
+  font-family: 'Sabon MT Std';
+  src: url('../fonts/custom/SabonMTStd-Regular.otf')format('opentype');
+}
+
 html {
   font-family: Sabon MT Std;
 }
@@ -41,7 +60,7 @@ ul.right.hide-on-med-and-down {
 }
 
 body h1 {
-  font-family: Brothers;
+  font-family: NCAA Marquette Bold;
 }
 
 body {
@@ -54,7 +73,7 @@ h1 {
 }
 
 h2 {
-  font-family: Brothers;
+  font-family: NCAA Marquette Bold;
 }
 
 h3 {
@@ -62,7 +81,7 @@ h3 {
 }
 h5 {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 #statForm {
@@ -195,8 +214,8 @@ h5 {
 }
 .carousel .carousel-item{
   width:100%;
-  padding: 5px;
-  font-size: large;
+  padding: 10px;
+  font-size: medium;
 }
 
 .teamMem {
