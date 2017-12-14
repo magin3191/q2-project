@@ -1,4 +1,7 @@
+
 This app is designed to find correlations of NBA statistics using imported csv data.
+
+Authors: Ross Tienken, Caelin Sheahan, Tim Jackson, Matt Agin.
 
 
 1.To get started, run 'npm install' in the command line.
@@ -47,9 +50,9 @@ Fonts/sizes:
 
 
 H2:
-Size:default
-Name characters
-NCAA Marquette Bold
+  - Size: default
+  - Name: characters
+  - Font: NCAA Marquette Bold
 
 
 
