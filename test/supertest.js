@@ -16,24 +16,42 @@ const knex = require('knex')
     })
   })
 
-  // describe('stats', function() {
-  //   it('checks stats path', function(done) {
-  //     request(app).get('/stats')
-  //     .expect('table', done)
-  //
-  //   })
-  // })
-  describe('stats', function() {
-    it('checks players path', function(done) {
-      request(app).get('/stats')
-      .expect('table', done)
-
+  app.post('/stats', function(req, res){
+    res.staus(200).json(results)
+})
+    describe('GET /stats', function(){
+      it('should get stats', function(done){
+        request(app)
+        .get('/stats')
+        .set('Accept', 'application/json')
+        .expect(function(res) {
+          req.body.constraint = (results), done
+        })
+      })
     })
-  })
 
-  // setTimeout((function() {
-  //      return process.exit();
-  //    }), 320);
+  app.get('/user', function(req, res) {
+    res.status(200).json({name: 'tobi'});
+  });
+
+  describe('GET /user', function() {
+  it('user.name should be an case-insensitive match for "tobi"', function(done) {
+    request(app)
+      .get('/user')
+      .set('Accept', 'application/json')
+      .expect(function(res) {
+        res.body.id = 'some fixed id';
+        res.body.name = res.body.name.toUpperCase();
+      })
+      .expect(200, {
+        id: 'some fixed id',
+        name: 'TOBI'
+      }, done);
+  });
+});
+  setTimeout((function() {
+       return process.exit();
+     }), 3200);
 
 // app.get('/stats_db', function(req, res) {
 //   res.status(200).json({name: 'g'});
