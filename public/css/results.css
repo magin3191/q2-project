@@ -7,7 +7,24 @@
 }
 
 #chart{
-  color:white;
+  border-radius: 10px;
+    background: maroon;
+  background-color: tan;
+}
+img{
+  border-radius: 25px;
+    background: #53b68c;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+  }
+#playerinfo1{
+  align-self: center;
+  text-align: center;
+}
+#playerinfo2{
+  align-self: center;
+  text-align: center;
 }
 /* CSS w/ R.O.S.S. */
 
