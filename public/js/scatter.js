@@ -52,14 +52,12 @@ $(document).ready(function() {
     },
     axis: {
       x: {
-        min: 0,
         label: `${stat2}`,
         tick: {
           fit: false
         }
       },
       y: {
-        min: 0,
         label: `${stat1}`,
         tick: {
           fit: false
@@ -69,53 +67,49 @@ $(document).ready(function() {
   })
   var labels = [
     [
-      results[9].player_name,
-      results[8].player_name,
-      results[7].player_name,
-      results[6].player_name,
-      results[5].player_name,
-      results[4].player_name,
-      results[3].player_name,
-      results[2].player_name,
-      results[1].player_name,
-      results[0].player_name
+      results[9].player.split(' ').slice(-1).join(' '),
+      results[8].player.split(' ').slice(-1).join(' '),
+      results[7].player.split(' ').slice(-1).join(' '),
+      results[6].player.split(' ').slice(-1).join(' '),
+      results[5].player.split(' ').slice(-1).join(' '),
+      results[4].player.split(' ').slice(-1).join(' '),
+      results[3].player.split(' ').slice(-1).join(' '),
+      results[2].player.split(' ').slice(-1).join(' '),
+      results[1].player.split(' ').slice(-1).join(' '),
+      results[0].player.split(' ').slice(-1).join(' ')
     ],
     [
-      results[9].player_name,
-      results[8].player_name,
-      results[7].player_name,
-      results[6].player_name,
-      results[5].player_name,
-      results[4].player_name,
-      results[3].player_name,
-      results[2].player_name,
-      results[1].player_name,
-      results[0].player_name
+      results[9].player.split(' ').slice(-1).join(' '),
+      results[8].player.split(' ').slice(-1).join(' '),
+      results[7].player.split(' ').slice(-1).join(' '),
+      results[6].player.split(' ').slice(-1).join(' '),
+      results[5].player.split(' ').slice(-1).join(' '),
+      results[4].player.split(' ').slice(-1).join(' '),
+      results[3].player.split(' ').slice(-1).join(' '),
+      results[2].player.split(' ').slice(-1).join(' '),
+      results[1].player.split(' ').slice(-1).join(' '),
+      results[0].player.split(' ').slice(-1).join(' ')
     ]
   ]
   // series
-  var series = chart.internal.main.selectAll(
-    '.' + c3.chart.internal.fn.CLASS.circles
-  )[0]
-  // text layers
-  var texts = chart.internal.main
-    .selectAll('.' + c3.chart.internal.fn.CLASS.chartTexts)
-    .selectAll('.' + c3.chart.internal.fn.CLASS.chartText)[0]
-  series.forEach(function(series, i) {
-    var points = d3
-      .select(series)
-      .selectAll('.' + c3.chart.internal.fn.CLASS.circle)[0]
-    points.forEach(function(point, j) {
-      d3
-        .select(texts[i])
-        .append('text')
-        .attr('text-anchor', 'middle')
-        .attr('dy', '0.3em')
-        .attr('x', d3.select(point).attr('cx'))
-        .attr('y', d3.select(point).attr('cy'))
-        .text(labels[i][j])
+var series = chart.internal.main
+                .selectAll('.' + c3.chart.internal.fn.CLASS.circles)[0];
+// text layers
+var texts = chart.internal.main
+                .selectAll('.' + c3.chart.internal.fn.CLASS.chartTexts)
+                .selectAll('.' + c3.chart.internal.fn.CLASS.chartText)[0]
+series.forEach(function (series, i) {
+    var points = d3.select(series).selectAll('.' + c3.chart.internal.fn.CLASS.circle)[0]
+    points.forEach(function (point, j) {
+        d3.select(texts[i])
+            .append('text')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '0.3em')
+            .attr('x', d3.select(point).attr('cx'))
+            .attr('y', d3.select(point).attr('cy'))
+            .text(labels[i][j])
     })
-  })
+})
   const playerId = results[0].player
   $.ajax({
     url:
