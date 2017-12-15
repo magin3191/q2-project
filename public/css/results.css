@@ -6,6 +6,9 @@
   font-size: inherit;
 }
 
+#chart{
+  color:white;
+}
 /* CSS w/ R.O.S.S. */
 
 @font-face {
