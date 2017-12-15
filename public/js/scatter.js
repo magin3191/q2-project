@@ -123,7 +123,7 @@ series.forEach(function (series, i) {
     url:
       'https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=' +
       playerId +
-      '+nba+player&mkt=en-us/',
+      '+nba+player+profile&mkt=en-us/',
     beforeSend: function(xhrObj) {
       // Request headers
       xhrObj.setRequestHeader(
