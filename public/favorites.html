@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Results Q2-Project</title>
+
+  <!-- CSS  -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/favorites.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.css" href="/css/master.css">
+
+    <!-- D3 version 4.12 is the latest, I'm intentionally using v3 to work with C3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.js" charset="utf-8"></script>
+  <script src='./js/scatter.js'></script>
+</head>
+
+<body>
+  <nav class="nav" role="navigation">
+    <div class="nav-wrapper container"><a id="logo" href="index.html" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <!-- Modal Trigger -->
+          <a id='logWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal3">Login</a>
+
+          <!-- Modal Structure -->
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <form id="loginWeb" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">Login</span>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="logEmailWeb" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="logPassWeb" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a id='closeModal' href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- Modal Trigger -->
+          <a id='signWeb' class="waves-effect waves-light btn-flat modal-trigger" href="#modal4">Signup</a>
+
+          <!-- Modal Structure -->
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <form id="signUpWeb" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <p class="card-title">Signup</p>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="First Name" id="signFnWeb" type="text" class="validate">
+                        <label for="fname">First Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Last Name" id="signLnWeb" type="text" class="validate">
+                        <label for="lname">Last Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="signEmailWeb" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="signPassWeb" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Signup</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a id='closeModal' href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Logout & Favorites -->
+        <li>
+          <a id='favoritesWeb' href="favorites.html" style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        </li>
+        <li>
+          <a id='logoutWeb' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <!-- Modal Trigger -->
+          <a id='logMobile' class="waves-effect waves-light btn-flat modal-trigger" href="#modal1">Login</a>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <form id="loginMobile" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">Login</span>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="logEmailMobile" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="logPassMobile" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="modal-action waves-effect waves-light btn-large" type="submit" name="action">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- Modal Trigger -->
+          <a id='signMobile' class="waves-effect waves-light btn-flat modal-trigger" href="#modal2">Signup</a>
+
+          <!-- Modal Structure -->
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <form id="signUpMobile" class="col offset-s2 s8">
+                <div class="card">
+                  <div class="card-content">
+                    <p class="card-title">Signup</p>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="First Name" id="signFnMobile" type="text" class="validate">
+                        <label for="firstName">First Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Last Name" id="signLnMobile" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Email" id="signEmailMobile" type="text" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="Password" id="signPassMobile" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <button class="waves-effect waves-light btn-large" type="submit" name="action">Signup
+                </button>
+                  </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">close</a>
+              </div>
+            </div>
+        </li>
+        <li>
+          <a id='favoritesMobile' href="favorites.html" style="display: none;" class="waves-effect waves-light btn-flat">Favorites</a>
+        </li>
+        <li>
+          <a id='logoutMobile' style="display: none;" class="waves-effect waves-light btn-flat">Logout</a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+  </nav>
+  <div id="index-banner">
+    <h1 class="header center orange-text">Favorites</h1>
+  </div>
+  <div id=results>
+    <div id='fav1' class='favorite'>
+      <div class='svgBall'>
+        <svg id='ball1' class="tooltipped" data-position="top" data-delay="50" data-tooltip="Remove Favorite" viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+        <path d="M142.327 112.062C214.1 47.017 307.79 5.714 411 .55V410.5H280.346c-8.144-184.333-121.358-284.64-138.02-298.438z" fill="currentColor"/>
+        <path class='.bb-1' d="M111.104 143.388C46.716 214.908 5.822 307.995.574 410.5h235.893c-7.19-145.817-109.942-251.965-125.363-267.112z" fill="currentColor"/>
+        <path d="M110.902 722.388C46.422 650.666 5.552 557.292.524 454.5h235.788c-8.297 149.66-114.564 257.273-125.41 267.888z" fill="currentColor"/>
+        <path d="M141.633 753.308C213.497 818.716 307.458 860.268 411 865.45V454.5H280.354c-8.297 189.4-127.334 289.638-138.72 298.808z" fill="currentColor"/>
+        <path d="M723.222 754.346C651.507 819.156 557.992 860.296 455 865.45V454h129.39c7.743 190.638 127.705 291.398 138.832 300.346z" fill="currentColor"/>
+        <path d="M754.06 723.538C819.244 651.55 860.555 557.54 865.5 454H628.416c7.704 151.184 115.666 259.807 125.644 269.538z" fill="currentColor"/>
+        <path d="M754.82 143.302C819.145 214.716 860.042 307.652 865.4 410H628.418c8.043-149.258 115.93-256.613 126.4-266.698z" fill="currentColor"/>
+        <path d="M723.687 112.075C651.91 47.022 558.217 5.715 455 .55V410h129.53c8.944-188.743 128.016-288.947 139.157-297.925z" fill="currentColor"/>
+        </svg>
+      </div>
+      <a id='buttonFav1' class='favCard'>
+      </a>
+    </div>
+    <div id='fav2' class='favorite'>
+      <div class='svgBall'>
+        <svg id='ball2' class="tooltipped" data-position="top" data-delay="50" data-tooltip="Remove Favorite" viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+        <path d="M142.327 112.062C214.1 47.017 307.79 5.714 411 .55V410.5H280.346c-8.144-184.333-121.358-284.64-138.02-298.438z" fill="currentColor"/>
+        <path class='.bb-1' d="M111.104 143.388C46.716 214.908 5.822 307.995.574 410.5h235.893c-7.19-145.817-109.942-251.965-125.363-267.112z" fill="currentColor"/>
+        <path d="M110.902 722.388C46.422 650.666 5.552 557.292.524 454.5h235.788c-8.297 149.66-114.564 257.273-125.41 267.888z" fill="currentColor"/>
+        <path d="M141.633 753.308C213.497 818.716 307.458 860.268 411 865.45V454.5H280.354c-8.297 189.4-127.334 289.638-138.72 298.808z" fill="currentColor"/>
+        <path d="M723.222 754.346C651.507 819.156 557.992 860.296 455 865.45V454h129.39c7.743 190.638 127.705 291.398 138.832 300.346z" fill="currentColor"/>
+        <path d="M754.06 723.538C819.244 651.55 860.555 557.54 865.5 454H628.416c7.704 151.184 115.666 259.807 125.644 269.538z" fill="currentColor"/>
+        <path d="M754.82 143.302C819.145 214.716 860.042 307.652 865.4 410H628.418c8.043-149.258 115.93-256.613 126.4-266.698z" fill="currentColor"/>
+        <path d="M723.687 112.075C651.91 47.022 558.217 5.715 455 .55V410h129.53c8.944-188.743 128.016-288.947 139.157-297.925z" fill="currentColor"/>
+        </svg>
+      </div>
+      <a id='buttonFav2' class='favCard'>
+      </a>
+    </div>
+    <div id='fav3' class='favorite'>
+      <div class='svgBall'>
+        <svg id='ball3' class="tooltipped" data-position="top" data-delay="50" data-tooltip="Remove Favorite" viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+        <path d="M142.327 112.062C214.1 47.017 307.79 5.714 411 .55V410.5H280.346c-8.144-184.333-121.358-284.64-138.02-298.438z" fill="currentColor"/>
+        <path class='.bb-1' d="M111.104 143.388C46.716 214.908 5.822 307.995.574 410.5h235.893c-7.19-145.817-109.942-251.965-125.363-267.112z" fill="currentColor"/>
+        <path d="M110.902 722.388C46.422 650.666 5.552 557.292.524 454.5h235.788c-8.297 149.66-114.564 257.273-125.41 267.888z" fill="currentColor"/>
+        <path d="M141.633 753.308C213.497 818.716 307.458 860.268 411 865.45V454.5H280.354c-8.297 189.4-127.334 289.638-138.72 298.808z" fill="currentColor"/>
+        <path d="M723.222 754.346C651.507 819.156 557.992 860.296 455 865.45V454h129.39c7.743 190.638 127.705 291.398 138.832 300.346z" fill="currentColor"/>
+        <path d="M754.06 723.538C819.244 651.55 860.555 557.54 865.5 454H628.416c7.704 151.184 115.666 259.807 125.644 269.538z" fill="currentColor"/>
+        <path d="M754.82 143.302C819.145 214.716 860.042 307.652 865.4 410H628.418c8.043-149.258 115.93-256.613 126.4-266.698z" fill="currentColor"/>
+        <path d="M723.687 112.075C651.91 47.022 558.217 5.715 455 .55V410h129.53c8.944-188.743 128.016-288.947 139.157-297.925z" fill="currentColor"/>
+        </svg>
+      </div>
+      <a id='buttonFav3' class='favCard'>
+      </a>
+    </div>
+    <div id='fav4' class='favorite'>
+      <div class='svgBall'>
+        <svg id='ball4' class="tooltipped" data-position="top" data-delay="50" data-tooltip="Remove Favorite" viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
+        <path d="M142.327 112.062C214.1 47.017 307.79 5.714 411 .55V410.5H280.346c-8.144-184.333-121.358-284.64-138.02-298.438z" fill="currentColor"/>
+        <path class='.bb-1' d="M111.104 143.388C46.716 214.908 5.822 307.995.574 410.5h235.893c-7.19-145.817-109.942-251.965-125.363-267.112z" fill="currentColor"/>
+        <path d="M110.902 722.388C46.422 650.666 5.552 557.292.524 454.5h235.788c-8.297 149.66-114.564 257.273-125.41 267.888z" fill="currentColor"/>
+        <path d="M141.633 753.308C213.497 818.716 307.458 860.268 411 865.45V454.5H280.354c-8.297 189.4-127.334 289.638-138.72 298.808z" fill="currentColor"/>
+        <path d="M723.222 754.346C651.507 819.156 557.992 860.296 455 865.45V454h129.39c7.743 190.638 127.705 291.398 138.832 300.346z" fill="currentColor"/>
+        <path d="M754.06 723.538C819.244 651.55 860.555 557.54 865.5 454H628.416c7.704 151.184 115.666 259.807 125.644 269.538z" fill="currentColor"/>
+        <path d="M754.82 143.302C819.145 214.716 860.042 307.652 865.4 410H628.418c8.043-149.258 115.93-256.613 126.4-266.698z" fill="currentColor"/>
+        <path d="M723.687 112.075C651.91 47.022 558.217 5.715 455 .55V410h129.53c8.944-188.743 128.016-288.947 139.157-297.925z" fill="currentColor"/>
+        </svg>
+      </div>
+      <a id='buttonFav4' class='favCard'>
+      </a>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <i id='copyright' class="material-icons valign-wrapper">copyright</i>
+    <h3 id='copyText' class="valign-wrapper">Tienken Stats 2017</h3>
+
+    <a id="about" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons"></i></a>
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-activates="about">
+      <div class="tap-target-content">
+        <h3>Team Members</h3>
+        <p class='teamMem'>• Ross Tienken</p>
+        <p class='teamMem'>• Caelin Sheahan</p>
+        <p class='teamMem'>• Tim Jackson</p>
+        <p class='teamMem'>• Matt Agin</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>
