@@ -5,7 +5,9 @@
 .icon-block .material-icons {
   font-size: inherit;
 }
-
+a{
+  color: black;
+}
 #chart{
   border-radius: 10px;
     background: maroon;
