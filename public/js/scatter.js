@@ -84,7 +84,7 @@ $.ajax({
   // Request body
   data: ''
 }).done(function(data) {
-  var yournamestring = result.player
+  var yournamestring = result[0].player
   var imageUrl1 = data.value[0].contentUrl
   var imageUrl1a = data.value[1].contentUrl
   var youareLine = $('<h2>').html(yournamestring)
