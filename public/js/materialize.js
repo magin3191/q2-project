@@ -9992,7 +9992,7 @@ if (Vel) {
           var tapTargetWrapperCssObj = {};
           tapTargetWrapperCssObj.top = isTop ? tapTargetTop : '';
           tapTargetWrapperCssObj.right = isRight ? windowWidth - tapTargetLeft - tapTargetWidth : '';
-          tapTargetWrapperCssObj.bottom = isBottom ? windowHeight - tapTargetTop - tapTargetHeight + 23 : '';
+          tapTargetWrapperCssObj.bottom = isBottom ? windowHeight - tapTargetTop - tapTargetHeight : '';
           tapTargetWrapperCssObj.left = isLeft ? tapTargetLeft : '';
           tapTargetWrapperCssObj.position = tapTargetPosition;
           tapTargetWrapper.css(tapTargetWrapperCssObj);

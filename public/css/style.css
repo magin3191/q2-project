@@ -107,7 +107,8 @@ h3 {
 .page-footer {
   padding: 1rem;
   height: 10%;
-  position: absolute;
+  position: fixed;
+  bottom: 0%;
   width: 100%;
   background-color: #0077a5;
 }
@@ -148,8 +149,8 @@ h3 {
   background: url(https://png.icons8.com/question-mark/win8/28/ffffff);
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  /*bottom: 20%;*/
+  position: fixed;
+  bottom: 2%;
   right: 5%;
   background-color: #4f0909;
 }
