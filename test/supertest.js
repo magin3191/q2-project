@@ -16,19 +16,19 @@ const knex = require('knex')
     })
   })
 
-  app.post('/stats', function(req, res){
-    res.staus(200).json(results)
-})
-    describe('GET /stats', function(){
-      it('should get stats', function(done){
-        request(app)
-        .get('/stats')
-        .set('Accept', 'application/json')
-        .expect(function(res) {
-          req.body.constraint = (results), done
-        })
-      })
-    })
+//   app.post('/stats', function(req, res) {
+//     res.staus(200).json(getRightConstraint)
+// })
+//     describe('GET /stats', function() {
+//       it('should get stats', function(done) {
+//         request(app)
+//         .get('/stats')
+//         .set('Accept', 'getRightConstraint/json')
+//         .expect(function(res) {
+//           req.body.constraint = 'results', done
+//         })
+//       })
+//     })
 
   app.get('/user', function(req, res) {
     res.status(200).json({name: 'tobi'});
@@ -49,18 +49,19 @@ const knex = require('knex')
       }, done);
   });
 });
-  setTimeout((function() {
-       return process.exit();
-     }), 3200);
 
-// app.get('/stats_db', function(req, res) {
-//   res.status(200).json({name: 'g'});
-// });
-// request(app)
-// .get('/stats_db')
-// .expect('Content-Type', /json/)
-// .expect('Content-Length', '15')
-// .expect(200)
-// .end(function(err, res) {
-//   if (err) throw err;
-// });
+app.get('/stats_db', function(req, res) {
+  res.status(200).json({name: 'g'});
+});
+request(app)
+.get('/stats_db')
+.expect('Content-Type', /json/)
+.expect('Content-Length', '12')
+.expect(200)
+.end(function(err, res) {
+  if (err) throw err;
+});
+
+setTimeout((function() {
+     return process.exit();
+   }), 3200);
