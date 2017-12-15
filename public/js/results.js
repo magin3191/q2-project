@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  event.preventDefault()
   const results = JSON.parse(localStorage.getItem('results'))
   const search_id = localStorage.getItem('search_id')
   const stat1 = localStorage.getItem('stat1')

@@ -8,11 +8,7 @@
 a{
   color: black;
 }
-#chart{
-  border-radius: 10px;
-    background: maroon;
-  background-color: tan;
-}
+
 img{
   border-radius: 25px;
     background: #53b68c;
@@ -116,7 +112,7 @@ h5 {
 
 #chart {
   height: 50%;
-  background-color: #ffffff61;
+  background-color: tan;
   border-radius: 5px;
   max-height: none;
 }
