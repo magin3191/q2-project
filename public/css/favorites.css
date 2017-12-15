@@ -5,29 +5,7 @@
 .icon-block .material-icons {
   font-size: inherit;
 }
-a{
-  color: black;
-}
-#chart{
-  border-radius: 10px;
-    background: maroon;
-  background-color: tan;
-}
-img{
-  border-radius: 25px;
-    background: #53b68c;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-  }
-#playerinfo1{
-  align-self: center;
-  text-align: center;
-}
-#playerinfo2{
-  align-self: center;
-  text-align: center;
-}
+
 /* CSS w/ R.O.S.S. */
 
 @font-face {
@@ -55,6 +33,7 @@ html {
 
 nav {
   height: 63px;
+  text-align: left;
   background-color: #0077a5;
 }
 
@@ -81,13 +60,23 @@ ul.right.hide-on-med-and-down {
   color: #4f0909;
 }
 
+#results {
+  padding-bottom: 50px;
+}
+
 body h1 {
   font-family: NCAA Marquette Bold;
+  margin: 30px 0px;
+}
+body h2 {
+  color: orange;
+  font-family: KlangMT;
 }
 
 body {
   background-color: #e6e6e6;
   padding-bottom: 10%;
+  text-align: center;
 }
 
 h1 {
@@ -96,6 +85,7 @@ h1 {
 
 h2 {
   font-family: NCAA Marquette Bold;
+  margin: 0;
 }
 
 h3 {
@@ -104,21 +94,6 @@ h3 {
 h5 {
   font-weight: bold;
   font-size: 1.1rem;
-}
-
-#statForm {
-  text-align: center;
-}
-
-#results {
-  padding-bottom: 50px;
-}
-
-#chart {
-  height: 50%;
-  background-color: #ffffff61;
-  border-radius: 5px;
-  max-height: none;
 }
 
 .page-footer {
@@ -198,56 +173,6 @@ h5 {
   text-align: center;
 }
 
-.dropdown {
-  color: white;
-  background-color: #4f0909;
-  border-radius: 10px;
-  text-align-last: center;
-  font-size: larger;
-  vertical-align: top;
-  border-width: 2px;
-}
-
-#search {
-  z-index: 0;
-}
-#tab1 {
-  background-color: #4f0909;
-}
-#swipe-1{
-  background-color: #4f0909;
-  color: white;
-}
-
-#tab2 {
-  background-color: #0f345e;
-}
-#swipe-2{
-  background-color: #0f345e;
-  color: white;
-}
-
-#tab3 {
-  background-color: #53b68c;
-}
-#swipe-3{
-  background-color: #53b68c;
-  color: white;
-}
-
-.tabs {
-  font-family: Klang MT;
-  border-radius: 10px 10px 0px 0px;
-}
-.tabs-content {
-  border-radius: 0px 0px 10px 10px;
-}
-.carousel .carousel-item{
-  width:100%;
-  padding: 10px;
-  font-size: medium;
-}
-
 .teamMem {
   margin:5px;
   text-align: left;
@@ -255,19 +180,54 @@ h5 {
   padding-left: 50px;
 }
 
+.favorite {
+  margin: 3%;
+  padding: 3%;
+  border: 2px solid #4f0909;
+  border-radius: 10px;
+  background-color: #4f0909;
+}
+
+.favCard {
+  border-radius: 5px;
+}
+
 /*favorites SVG animation*/
-#svgBall {
+.svgBall {
   width: 100%;
-  height: 110px;
   padding: 0%;
 }
-#ball {
-  height: 100px;
-  stroke: black;
-  stroke-width: 5;
+#ball1 {
+  height: 65px;
+  stroke: white;
+  stroke-width: 10px;
   position: absolute;
-  right: 2%;
-  color: transparent;
+  right: 6%;
+  color: orange;
+}
+#ball2 {
+  height: 65px;
+  stroke: white;
+  stroke-width: 10px;
+  position: absolute;
+  right: 6%;
+  color: orange;
+}
+#ball3 {
+  height: 65px;
+  stroke: white;
+  stroke-width: 10px;
+  position: absolute;
+  right: 6%;
+  color: orange;
+}
+#ball4 {
+  height: 65px;
+  stroke: white;
+  stroke-width: 10px;
+  position: absolute;
+  right: 6%;
+  color: orange;
 }
 
 @keyframes fade1 {

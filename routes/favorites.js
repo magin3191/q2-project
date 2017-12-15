@@ -2,7 +2,10 @@
 
 const bcrypt = require('bcrypt')
 const boom = require('boom')
-const { camelizeKeys, decamelizeKeys } = require('humps')
+const {
+  camelizeKeys,
+  decamelizeKeys
+} = require('humps')
 const jwt = require('jsonwebtoken')
 const knex = require('../knex')
 const express = require('express')
@@ -21,8 +24,8 @@ const authorize = (req, res, next) => {
 
 router.get('/favorites', authorize, (req, res, next) => {
   knex('favorites')
-    .innerJoin('books', 'books.id', 'favorites.book_id')
     .where('favorites.user_id', req.claim.userId)
+    .orderBy('id', 'desc')
     .then((items) => {
       const favs = camelizeKeys(items)
       res.send(favs)
@@ -31,7 +34,10 @@ router.get('/favorites', authorize, (req, res, next) => {
 
 router.post('/favorites', authorize, (req, res, next) => {
   let search = JSON.stringify(req.body)
-  const newFav = {user_id: req.claim.userId,favorite: search}
+  const newFav = {
+    user_id: req.claim.userId,
+    favorite: search
+  }
   return knex('favorites').insert(newFav, '*')
     .then(fav => {
       res.send(camelizeKeys(fav[0]))
@@ -49,11 +55,11 @@ router.delete('/favorites', authorize, (req, res, next) => {
     .then(fav => {
       favs = camelizeKeys(fav)
       return knex('favorites').del()
-      .where('id', favs.id)
-      .then(() => {
-        delete favs.id
-        res.send(favs)
-      })
+        .where('id', favs.id)
+        .then(() => {
+          delete favs.id
+          res.send(favs)
+        })
 
     })
     .catch((err) => {
