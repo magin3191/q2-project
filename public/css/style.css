@@ -60,6 +60,9 @@ ul.right.hide-on-med-and-down {
 #closeModal{
   color: #4f0909;
 }
+.modal-close {
+  color: #4f0909;
+}
 
 body {
   background-color: #e6e6e6;
@@ -87,12 +90,17 @@ h3 {
 
 #keys {
  text-align: center;
-  color: black;
+ color: white;
 }
 
 #modal5 {
   color: #4f0909;
   text-align: center;
+}
+
+#index-banner {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .page-footer {
