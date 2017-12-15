@@ -13,6 +13,12 @@ $(document).ready(function() {
       },
       r: 10
     },
+    padding: {
+       top: 10,
+       right: 10,
+       bottom: 10,
+       left: 35,
+   },
     data: {
       xs: {
         stat1: 'stat2'
@@ -52,12 +58,14 @@ $(document).ready(function() {
     },
     axis: {
       x: {
+        padding: {left:0.3, right:1},
         label: `${stat2}`,
         tick: {
           fit: false
         }
       },
       y: {
+        padding: {bottom:10},
         label: `${stat1}`,
         tick: {
           fit: false
