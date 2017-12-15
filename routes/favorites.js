@@ -15,7 +15,7 @@ const JWT_KEY = process.env.JWT_KEY
 const authorize = (req, res, next) => {
   jwt.verify(req.cookies.token, JWT_KEY, (err, payload) => {
     if (err) {
-      return next(boom.create(401, 'Unauthorized'))
+      return next(err)
     }
     req.claim = payload
     next()

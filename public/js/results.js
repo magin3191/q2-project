@@ -8,24 +8,30 @@ $(document).ready(() => {
 
   let favArr
   let oldFav
-  $.getJSON('/favorites')
-    .done((favorites) => {
-      favArr = favorites
-      oldFav = favArr[3]
-      for (let idx in favorites) {
-        if (favorites[idx].favorite === search_id) {
-          ball
-          .css({
-              'color': 'orange'
+  $.getJSON('/token')
+    .done((loggedIn) => {
+      if(loggedIn){
+        $.getJSON('/favorites')
+          .done((favorites) => {
+            favArr = favorites
+            oldFav = favArr[3]
+            for (let idx in favorites) {
+              if (favorites[idx].favorite === search_id) {
+                ball
+                .css({
+                    'color': 'orange'
+                  })
+                  .attr({
+                    'data-tooltip': 'Remove Favorite'
+                  })
+                }
+              }
             })
-            .attr({
-              'data-tooltip': 'Remove Favorite'
-            })
-        }
-      }
-
+            .fail(() => {})
+          }
     })
     .fail(() => {})
+
 
 
   let tr = $('<tr/>')
