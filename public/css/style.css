@@ -85,6 +85,16 @@ h3 {
   text-align: center;
 }
 
+#keys {
+ text-align: center;
+  color: black;
+}
+
+#modal5 {
+  color: #4f0909;
+  text-align: center;
+}
+
 .page-footer {
   padding: 1rem;
   height: 10%;
