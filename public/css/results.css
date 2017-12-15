@@ -5,22 +5,21 @@
 .icon-block .material-icons {
   font-size: inherit;
 }
-a{
-  color: black;
-}
 
-img{
+img {
   border-radius: 25px;
     background: #53b68c;
     padding: 20px;
     width: 300px;
     height: 300px;
-  }
-#playerinfo1{
+}
+
+#playerinfo1 {
   align-self: center;
   text-align: center;
 }
-#playerinfo2{
+
+#playerinfo2 {
   align-self: center;
   text-align: center;
 }
@@ -46,6 +45,7 @@ img{
 }
 
 html {
+  height: 100%;
   font-family: Sabon MT Std;
 }
 
@@ -82,6 +82,7 @@ body h1 {
 }
 
 body {
+  height: 100%;
   background-color: #e6e6e6;
   padding-bottom: 10%;
 }
