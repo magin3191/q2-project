@@ -155,12 +155,14 @@ $(document).ready(function() {
     })
       .done(function(data4) {
         var playerNews = 'Recent News:'
+        var playerName = playerId
         var newsbreak = $('<br>')
         var headline1 = data4.value[0].name
         var headline2 = data4.value[1].name
         var headline1Link = data4.value[0].url
         var headline2Link = data4.value[1].url
-        var newsheader = $('<h3>').html(playerNews)
+        var newsheader = $('<h4>').html(playerNews)
+        var playerheader = $('<h3>').html(playerName)
         var link1 = $('<a>').html(headline1Link)
         var link2 = $('<a>').html(headline2Link)
         link1.attr('href', headline1Link)
@@ -168,6 +170,7 @@ $(document).ready(function() {
         var postHL1 = $('<li>').html(headline1)
         var postHL2 = $('<li>').html(headline2)
         $('#playerinfo2').append(
+          playerheader,
           newsheader,
           newsbreak,
           postHL1,
