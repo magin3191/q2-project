@@ -9970,7 +9970,7 @@ if (Vel) {
           var tapTargetHeight = tapTargetEl.outerHeight();
           var tapTargetTop = originTop + originHeight / 2 - tapTargetHeight / 2;
           var tapTargetLeft = originLeft + originWidth / 2 - tapTargetWidth / 2;
-          var tapTargetPosition = isFixed ? 'fixed' : 'absolute';
+          var tapTargetPosition = isFixed ? 'fixed' : 'fixed';
 
           // Calculating content
           var tapTargetTextWidth = isCenterX ? tapTargetWidth : tapTargetWidth / 2 + originWidth;
@@ -9992,7 +9992,7 @@ if (Vel) {
           var tapTargetWrapperCssObj = {};
           tapTargetWrapperCssObj.top = isTop ? tapTargetTop : '';
           tapTargetWrapperCssObj.right = isRight ? windowWidth - tapTargetLeft - tapTargetWidth : '';
-          tapTargetWrapperCssObj.bottom = isBottom ? windowHeight - tapTargetTop - tapTargetHeight : '';
+          tapTargetWrapperCssObj.bottom = isBottom ? windowHeight - tapTargetTop - tapTargetHeight + 23 : '';
           tapTargetWrapperCssObj.left = isLeft ? tapTargetLeft : '';
           tapTargetWrapperCssObj.position = tapTargetPosition;
           tapTargetWrapper.css(tapTargetWrapperCssObj);

@@ -149,7 +149,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  bottom: 20%;
+  /*bottom: 20%;*/
   right: 5%;
   background-color: #4f0909;
 }
