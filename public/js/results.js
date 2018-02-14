@@ -1,5 +1,18 @@
 $(document).ready(() => {
   event.preventDefault()
+
+  $('.modal').modal({
+    dismissible: true, // Modal can be dismissed by clicking outside of the modal
+    opacity: 0, // Opacity of modal background
+    inDuration: 300, // Transition in duration
+    outDuration: 200, // Transition out duration
+    startingTop: '4%', // Starting top style attribute
+    endingTop: '10%', // Ending top style attribute
+    ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+    },
+    complete: () => {} // Callback for Modal close
+  });
+  
   const results = JSON.parse(localStorage.getItem('results'))
   const search_id = localStorage.getItem('search_id')
   const stat1 = localStorage.getItem('stat1')
