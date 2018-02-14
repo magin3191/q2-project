@@ -106,7 +106,8 @@ h5 {
 .page-footer {
   padding: 1rem;
   height: 10%;
-  position: absolute;
+  position: fixed;
+  bottom: 0%;
   width: 100%;
   background-color: #0077a5;
 }
@@ -199,11 +200,37 @@ h5 {
   border-radius: 5px;
 }
 
+#fav0 {
+  display: none;
+}
+
+#fav1 {
+  display: none;
+}
+
+#fav2 {
+  display: none;
+}
+
+#fav3 {
+  display: none;
+}
+
 /*favorites SVG animation*/
 
 .svgBall {
   width: 100%;
   padding: 0%;
+}
+
+
+#ball0 {
+  height: 65px;
+  stroke: white;
+  stroke-width: 10px;
+  position: absolute;
+  right: 6%;
+  color: orange;
 }
 
 #ball1 {
@@ -225,15 +252,6 @@ h5 {
 }
 
 #ball3 {
-  height: 65px;
-  stroke: white;
-  stroke-width: 10px;
-  position: absolute;
-  right: 6%;
-  color: orange;
-}
-
-#ball4 {
   height: 65px;
   stroke: white;
   stroke-width: 10px;

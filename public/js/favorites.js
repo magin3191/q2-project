@@ -1,45 +1,29 @@
 (function() {
   'use strict'
-  let fav1
-  let fav2
-  let fav3
-  let fav4
 
-  let par1
-  let par2
-  let par3
-  let par4
+  const favStats = {}
 
+  const ball0 = $('#ball0')
   const ball1 = $('#ball1')
   const ball2 = $('#ball2')
   const ball3 = $('#ball3')
-  const ball4 = $('#ball4')
 
+  const button0 = $('#buttonFav0')
   const button1 = $('#buttonFav1')
   const button2 = $('#buttonFav2')
   const button3 = $('#buttonFav3')
-  const button4 = $('#buttonFav4')
-
 
   $.getJSON('/favorites')
     .done((favorites) => {
-      fav1 = favorites[0].favorite
-      fav2 = favorites[1].favorite
-      fav3 = favorites[2].favorite
-      fav4 = favorites[3].favorite
+      for(let i in favorites) {
+        console.log(favorites)
+        let fav = JSON.parse(favorites[i].favorite)
 
-      par1 = JSON.parse(fav1)
-      par2 = JSON.parse(fav2)
-      par3 = JSON.parse(fav3)
-      par4 = JSON.parse(fav4)
+        favStats[`ball${i}`] = fav
 
-      button1.append(`<h2>${par1.stat1}<br/>+<br/>${par1.stat2}<br/>+<br/>${par1.constraint} players`)
-
-      button2.append(`<h2>${par2.stat1}<br/>+<br/>${par2.stat2}<br/>+<br/>${par2.constraint} players`)
-
-      button3.append(`<h2>${par3.stat1}<br/>+<br/>${par3.stat2}<br/>+<br/>${par3.constraint} players`)
-
-      button4.append(`<h2>${par4.stat1}<br/>+<br/>${par4.stat2}<br/>+<br/>${par4.constraint} players`)
+        $(`#fav${i}`).css('display', 'inherit')
+        $(`#buttonFav${i}`).append(`<h2>${fav.stat1}<br/>+<br/>${fav.stat2}<br/>+<br/>${fav.constraint} players`)
+      }
 
     })
     .fail(() => {
@@ -47,50 +31,54 @@
     })
 
 
+  ball0.click(function() {
+    if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
+      addFavorite(ball0, JSON.stringify(favStats[this.id]))
+    } else {
+      removeFavorite(ball0, JSON.stringify(favStats[this.id]))
+    }
+  })
+
   ball1.click(function() {
     if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
-      addFavorite(ball1, fav1)
+      addFavorite(ball1, JSON.stringify(favStats[this.id]))
     } else {
-      removeFavorite(ball1, fav1)
+      removeFavorite(ball1, JSON.stringify(favStats[this.id]))
     }
   })
+
   ball2.click(function() {
     if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
-      addFavorite(ball2, fav2)
+      addFavorite(ball2, JSON.stringify(favStats[this.id]))
     } else {
-      removeFavorite(ball2, fav2)
+      removeFavorite(ball2, JSON.stringify(favStats[this.id]))
     }
   })
+
   ball3.click(function() {
     if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
-      addFavorite(ball3, fav3)
+      addFavorite(ball3, JSON.stringify(favStats[this.id]))
     } else {
-      removeFavorite(ball3, fav3)
-    }
-  })
-  ball4.click(function() {
-    if ($(this).css('color') === 'rgba(0, 0, 0, 0)') {
-      addFavorite(ball4, fav4)
-    } else {
-      removeFavorite(ball4, fav4)
+      removeFavorite(ball3, JSON.stringify(favStats[this.id]))
     }
   })
 
+
+  button0.click(function() {
+    search(favStats.ball0)
+  })
   button1.click(function() {
-    search(par1)
+    search(favStats.ball1)
   })
   button2.click(function() {
-    search(par2)
+    search(favStats.ball2)
   })
   button3.click(function() {
-    search(par3)
-  })
-  button4.click(function() {
-    search(par4)
+    search(favStats.ball3)
   })
 
 
-  const addFavorite = (ball, favId) => {
+  const addFavorite = (svgBall, favId) => {
     event.preventDefault()
 
     const options = {
@@ -103,7 +91,7 @@
 
     $.ajax(options)
       .done(() => {
-        ball
+        svgBall
           .css({
             'color': 'orange',
             'animation': 'fade1 .5s linear 1'
@@ -119,7 +107,7 @@
       })
   }
 
-  const removeFavorite = (ball, favId) => {
+  const removeFavorite = (svgBall, favId) => {
     event.preventDefault()
 
     const options = {
@@ -132,7 +120,7 @@
 
     $.ajax(options)
       .done(() => {
-        ball
+        svgBall
           .css({
             'color': 'rgba(0, 0, 0, 0)',
             'animation': 'fade2 .5s linear 1'
