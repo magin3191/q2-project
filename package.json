@@ -32,7 +32,7 @@
     "humps": "^2.0.1",
     "jsdom": "^11.5.1",
     "jsonwebtoken": "^8.1.0",
-    "knex": "^0.14.2",
+    "knex": "^0.14.4",
     "knex-csv-seeder": "^0.4.1",
     "materialize-css": "^0.100.2",
     "node": "^9.3.0",

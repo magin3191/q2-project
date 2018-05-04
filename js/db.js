@@ -74,7 +74,7 @@ function getRightConstraint(domc) {
 // // this will be handed from dom, these are both coming from the player-teams table knex('player_teams').select(domStat2)
 // const constraint = getRightConstraint(domConstraint) //this comes from players table
 
-// the order here is we cut down the player table based on the contrait, then we will grab the entries in player-teams
+// the order here is we cut down the player table based on the constraint, then we will grab the entries in player-teams
 // linked by name, then we grab the two stats we want. After that we generate an object that looks like [{player_name: Alex Abrines, stat1: 12, stat2: 2}]
 
 function cutDownData(constraint, domStat1, domStat2) {
